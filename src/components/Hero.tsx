@@ -1,9 +1,38 @@
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { ArrowRight, FileText } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Link } from "react-router-dom";
+import svgPaths from "../imports/svg-hag3c2cwe3";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 export function Hero() {
+  const promptTexts = [
+    "Starting a new facility",
+    "Upgrading existing equipment",
+    "Improving efficiency",
+    "Meeting compliance standards",
+    "Expanding production capacity",
+    "Reducing operational costs"
+  ];
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(true);
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(false);
+      
+      setTimeout(() => {
+        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % promptTexts.length);
+        setIsAnimating(true);
+      }, 300);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative bg-[#12141d] text-white overflow-hidden">
       {/* Subtle background pattern */}
@@ -74,24 +103,108 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#12141d] via-transparent to-transparent opacity-60"></div>
             </div>
 
-            {/* Stats Overlay Card */}
+            {/* Prompt Input */}
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[calc(100%-4rem)] max-w-3xl">
-              <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-6 md:p-8">
-                <div className="grid grid-cols-3 gap-6 md:gap-8">
-                  <div className="text-center">
-                    <div className="text-[#1e3a8a] mb-2">27+</div>
-                    <div className="text-xs md:text-sm text-gray-600">Years Experience</div>
+              <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
+                <PopoverTrigger asChild>
+                  <div className="backdrop-blur-[6px] backdrop-filter bg-[#fcfcfc] rounded-[24px] relative cursor-pointer">
+                    <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
+                      <div className="box-border content-stretch flex flex-col gap-[24px] items-center p-[20px] relative w-full">
+                        {/* Premade Prompt Item */}
+                        <div className="content-stretch flex gap-[4px] h-[32px] items-center overflow-clip relative rounded-[10px] shrink-0 w-full">
+                          <div className="relative shrink-0 size-[24px]">
+                            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
+                              <g>
+                                <path d={svgPaths.p2ad11100} stroke="#121212" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                                <path d="M11.7 9.5L14.5 12.3" stroke="#121212" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                                <path d="M18.5 5.5L19.27 4.73001" stroke="#121212" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                                <path d="M15.57 3.79999L15.85 2.75" stroke="#121212" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                                <path d="M20.2 8.42999L21.25 8.14999" stroke="#121212" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                              </g>
+                            </svg>
+                          </div>
+                          <p 
+                            className="basis-0 grow min-h-px min-w-px overflow-ellipsis overflow-hidden relative shrink-0 text-[#121212] text-nowrap transition-opacity duration-300" 
+                            style={{ 
+                              whiteSpace: 'nowrap',
+                              opacity: isAnimating ? 1 : 0
+                            }}
+                          >
+                            {promptTexts[currentTextIndex]}
+                          </p>
+                        </div>
+
+                        {/* Row with Prompt and Button */}
+                        <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
+                          {/* Prompt Text */}
+                          <div className="content-stretch flex gap-[2px] items-center relative shrink-0">
+                            <div className="bg-[#1e3a8a] h-[24px] shrink-0 w-[2px]" />
+                            <p className="text-[14px] leading-[20px] opacity-70 relative shrink-0 text-[#121212] text-nowrap whitespace-pre">
+                              Find Your Perfect Solution in 60 Seconds
+                            </p>
+                          </div>
+                          
+                          {/* Button */}
+                          <button className="bg-[#f97316] hover:bg-[#ea580c] transition-colors box-border content-stretch flex gap-[8px] h-[50px] items-center justify-center px-[24px] py-[16px] relative rounded-[100px] shrink-0">
+                            <div className="relative shrink-0 size-[24px]">
+                              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
+                                <g>
+                                  <path d={svgPaths.p244cad00} stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                </g>
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 pointer-events-none shadow-[0px_2px_0px_0px_inset_#ffffff]" />
+                    <div aria-hidden="true" className="absolute border border-[#ececec] border-solid inset-0 pointer-events-none rounded-[24px] shadow-[0px_18px_24px_-20px_rgba(0,0,0,0.13),0px_8px_16px_-12px_rgba(0,0,0,0.08)]" />
                   </div>
-                  <div className="text-center border-l border-r border-gray-200">
-                    <div className="text-[#1e3a8a] mb-2">100+</div>
-                    <div className="text-xs md:text-sm text-gray-600">Projects Completed</div>
+                </PopoverTrigger>
+                <PopoverContent 
+                  className="w-full p-0 border-0 bg-transparent shadow-none"
+                  sideOffset={12}
+                  align="center"
+                  style={{ width: 'var(--radix-popover-trigger-width)' }}
+                >
+                  {/* Premade Prompt Popover */}
+                  <div className="bg-[#fcfcfc] rounded-[24px] w-full">
+                    <div className="content-stretch flex flex-col items-center overflow-clip relative rounded-[inherit] w-full">
+                      {/* List */}
+                      <div className="relative w-full">
+                        <div className="size-full">
+                          <div className="box-border content-stretch flex flex-col gap-[2px] items-start p-[12px] relative w-full">
+                            {promptTexts.map((text, index) => (
+                              <button
+                                key={index}
+                                onClick={() => {
+                                  // Functionality will be added later
+                                  setIsPopoverOpen(false);
+                                }}
+                                className={`${
+                                  index === 1 ? 'bg-[#f8f7f7]' : ''
+                                } relative rounded-[10px] w-full hover:bg-[#f8f7f7] transition-colors`}
+                              >
+                                <div className="flex flex-row items-center overflow-clip rounded-[inherit] size-full">
+                                  <div className="box-border content-stretch flex gap-[8px] items-center px-[12px] py-[16px] relative w-full">
+                                    <p className="basis-0 grow leading-[20px] min-h-px min-w-px overflow-ellipsis overflow-hidden relative shrink-0 text-[#121212] text-[16px] text-nowrap tracking-[-0.16px] text-left">
+                                      {text}
+                                    </p>
+                                  </div>
+                                </div>
+                                {index === 1 && (
+                                  <div aria-hidden="true" className="absolute border border-[#ececec] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                                )}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div aria-hidden="true" className="absolute border border-[#ececec] border-solid inset-0 pointer-events-none rounded-[24px] shadow-[0px_16px_4px_0px_rgba(0,0,0,0),0px_10px_4px_0px_rgba(0,0,0,0),0px_6px_3px_0px_rgba(0,0,0,0.01),0px_3px_3px_0px_rgba(0,0,0,0.02),0px_1px_1px_0px_rgba(0,0,0,0.02)]" />
                   </div>
-                  <div className="text-center">
-                    <div className="text-[#f97316] mb-2">ISO</div>
-                    <div className="text-xs md:text-sm text-gray-600">Certified Partner</div>
-                  </div>
-                </div>
-              </div>
+                </PopoverContent>
+              </Popover>
             </div>
           </div>
         </div>
