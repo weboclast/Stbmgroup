@@ -37,15 +37,15 @@ export function FinalCTA() {
 
             <div className="grid md:grid-cols-3 gap-6 mb-16">
               <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-12 h-12 bg-[#f97316]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-6 h-6 text-[#f97316]" />
+                <div className="w-12 h-12 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-[#FF5757]" />
                 </div>
                 <h3 className="text-[#1e3a8a] mb-2">Schedule a Consultation</h3>
                 <p className="text-sm text-gray-600 mb-4">Free facility assessment</p>
                 <Button 
                   size="sm" 
                   variant="outline" 
-                  className="border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-white"
+                  className="border-[#FF5757] text-[#FF5757] hover:bg-[#FF5757] hover:text-white"
                   asChild
                 >
                   <Link to="/enquiry">Book Now</Link>
@@ -53,15 +53,15 @@ export function FinalCTA() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-12 h-12 bg-[#f97316]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Download className="w-6 h-6 text-[#f97316]" />
+                <div className="w-12 h-12 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Download className="w-6 h-6 text-[#FF5757]" />
                 </div>
                 <h3 className="text-[#1e3a8a] mb-2">Download Solutions Guide</h3>
                 <p className="text-sm text-gray-600 mb-4">2024 Food Processing Handbook</p>
                 <Button 
                   size="sm" 
                   variant="outline" 
-                  className="border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-white"
+                  className="border-[#FF5757] text-[#FF5757] hover:bg-[#FF5757] hover:text-white"
                   asChild
                 >
                   <Link to="/resources">Download</Link>
@@ -69,15 +69,15 @@ export function FinalCTA() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-12 h-12 bg-[#f97316]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MessageSquare className="w-6 h-6 text-[#f97316]" />
+                <div className="w-12 h-12 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="w-6 h-6 text-[#FF5757]" />
                 </div>
                 <h3 className="text-[#1e3a8a] mb-2">WhatsApp an Expert</h3>
                 <p className="text-sm text-gray-600 mb-4">Quick questions answered instantly</p>
                 <Button 
                   size="sm" 
                   variant="outline" 
-                  className="border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-white"
+                  className="border-[#FF5757] text-[#FF5757] hover:bg-[#FF5757] hover:text-white"
                   asChild
                 >
                   <a href="https://wa.me/971XXXXXXXXX" target="_blank" rel="noopener noreferrer">
@@ -170,7 +170,7 @@ export function FinalCTA() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-[#f97316] hover:bg-[#ea580c] text-white">
+                  <Button type="submit" className="w-full bg-[#FF5757] hover:bg-[#E04848] text-white">
                     Submit Enquiry
                   </Button>
                 </form>
@@ -182,28 +182,28 @@ export function FinalCTA() {
                 
                 <div className="space-y-6 mb-8">
                   <div className="flex gap-4">
-                    <Phone className="w-5 h-5 text-[#f97316] flex-shrink-0 mt-1" />
+                    <Phone className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-1" />
                     <div>
                       <div className="text-sm text-blue-200 mb-1">Direct Line</div>
                       <div className="text-white">+971 XX XXX XXXX</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <MessageSquare className="w-5 h-5 text-[#f97316] flex-shrink-0 mt-1" />
+                    <MessageSquare className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-1" />
                     <div>
                       <div className="text-sm text-blue-200 mb-1">WhatsApp</div>
                       <div className="text-white">+971 XX XXX XXXX</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <Mail className="w-5 h-5 text-[#f97316] flex-shrink-0 mt-1" />
+                    <Mail className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-1" />
                     <div>
                       <div className="text-sm text-blue-200 mb-1">Email</div>
                       <div className="text-white">solutions@stbmgroup.com</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <MapPin className="w-5 h-5 text-[#f97316] flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-1" />
                     <div>
                       <div className="text-sm text-blue-200 mb-1">Location</div>
                       <div className="text-white">Abu Dhabi, UAE</div>

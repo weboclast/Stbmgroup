@@ -59,8 +59,8 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardContent className="p-8">
-                <div className="w-14 h-14 bg-[#f97316]/10 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-[#f97316]" />
+                <div className="w-14 h-14 bg-[#FF5757]/10 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="w-7 h-7 text-[#FF5757]" />
                 </div>
                 <h3 className="text-[#1e3a8a] mb-4">Our Mission</h3>
                 <p className="text-gray-600">
@@ -74,8 +74,8 @@ export function About() {
 
             <Card>
               <CardContent className="p-8">
-                <div className="w-14 h-14 bg-[#f97316]/10 rounded-lg flex items-center justify-center mb-6">
-                  <Lightbulb className="w-7 h-7 text-[#f97316]" />
+                <div className="w-14 h-14 bg-[#FF5757]/10 rounded-lg flex items-center justify-center mb-6">
+                  <Lightbulb className="w-7 h-7 text-[#FF5757]" />
                 </div>
                 <h3 className="text-[#1e3a8a] mb-4">Our Vision</h3>
                 <p className="text-gray-600">
@@ -118,8 +118,8 @@ export function About() {
             ].map((item, index) => (
               <Card key={index}>
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-[#f97316]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-8 h-8 text-[#f97316]" />
+                  <div className="w-16 h-16 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-8 h-8 text-[#FF5757]" />
                   </div>
                   <h3 className="text-[#1e3a8a] mb-3">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.description}</p>
@@ -181,7 +181,7 @@ export function About() {
             and facility needs. Let's discuss how we can help your operation thrive.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-[#f97316] hover:bg-[#ea580c]" asChild>
+            <Button size="lg" className="bg-[#FF5757] hover:bg-[#E04848]" asChild>
               <Link to="/enquiry">Get Started</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>

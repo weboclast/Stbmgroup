@@ -158,7 +158,7 @@ export function Enquiry() {
                             <div className="flex-1">
                               <h3 className="text-[#1e3a8a] mb-1">{item.name}</h3>
                               <div className="text-sm text-gray-500 mb-2">Model: {item.model}</div>
-                              <div className="text-sm text-[#f97316]">{item.category}</div>
+                              <div className="text-sm text-[#FF5757]">{item.category}</div>
                             </div>
                             <Button
                               variant="ghost"
@@ -437,7 +437,7 @@ export function Enquiry() {
                 <Button
                   size="lg"
                   onClick={handleSubmit}
-                  className="bg-[#f97316] hover:bg-[#ea580c] gap-2"
+                  className="bg-[#FF5757] hover:bg-[#E04848] gap-2"
                   disabled={!formData.acceptPrivacy}
                 >
                   <Send className="w-5 h-5" />

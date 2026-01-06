@@ -41,8 +41,8 @@ export function Services() {
               key={index}
               className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100"
             >
-              <div className="w-14 h-14 bg-[#f97316]/10 rounded-lg flex items-center justify-center mb-6">
-                <service.icon className="w-7 h-7 text-[#f97316]" />
+              <div className="w-14 h-14 bg-[#FF5757]/10 rounded-lg flex items-center justify-center mb-6">
+                <service.icon className="w-7 h-7 text-[#FF5757]" />
               </div>
               <h3 className="text-[#1e3a8a] mb-3">{service.title}</h3>
               <p className="text-gray-600 text-sm">{service.description}</p>

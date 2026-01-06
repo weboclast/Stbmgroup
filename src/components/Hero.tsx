@@ -46,7 +46,7 @@ export function Hero() {
         {/* Badge */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5">
-            <div className="w-2 h-2 bg-[#f97316] rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-[#FF5757] rounded-full animate-pulse"></div>
             <span className="text-sm text-white">27+ Years of Excellence • 100+ Projects Delivered • UAE Leader</span>
           </div>
         </div>
@@ -66,7 +66,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-[#f97316] hover:bg-[#ea580c] text-white gap-2 rounded-full px-8 h-12"
+              className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2 rounded-full px-8 h-12"
               asChild
             >
               <Link to="/products">
@@ -145,7 +145,7 @@ export function Hero() {
                           </div>
                           
                           {/* Button */}
-                          <button className="bg-[#f97316] hover:bg-[#ea580c] transition-colors box-border content-stretch flex gap-[8px] h-[50px] items-center justify-center px-[24px] py-[16px] relative rounded-[100px] shrink-0">
+                          <button className="bg-[#FF5757] hover:bg-[#E04848] transition-colors box-border content-stretch flex gap-[8px] h-[50px] items-center justify-center px-[24px] py-[16px] relative rounded-[100px] shrink-0">
                             <div className="relative shrink-0 size-[24px]">
                               <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
                                 <g>
@@ -174,29 +174,39 @@ export function Hero() {
                       <div className="relative w-full">
                         <div className="size-full">
                           <div className="box-border content-stretch flex flex-col gap-[2px] items-start p-[12px] relative w-full">
-                            {promptTexts.map((text, index) => (
-                              <button
-                                key={index}
-                                onClick={() => {
-                                  // Functionality will be added later
-                                  setIsPopoverOpen(false);
-                                }}
-                                className={`${
-                                  index === 1 ? 'bg-[#f8f7f7]' : ''
-                                } relative rounded-[10px] w-full hover:bg-[#f8f7f7] transition-colors`}
-                              >
-                                <div className="flex flex-row items-center overflow-clip rounded-[inherit] size-full">
-                                  <div className="box-border content-stretch flex gap-[8px] items-center px-[12px] py-[16px] relative w-full">
-                                    <p className="basis-0 grow leading-[20px] min-h-px min-w-px overflow-ellipsis overflow-hidden relative shrink-0 text-[#121212] text-[16px] text-nowrap tracking-[-0.16px] text-left">
-                                      {text}
-                                    </p>
+                            {promptTexts.map((text, index) => {
+                              const paths = [
+                                "/solutions/complete-facilities/cattle-slaughterhouse",
+                                "/solutions/operations-support/preventive-maintenance",
+                                "/solutions/infrastructure-systems/power-and-automation",
+                                "/solutions/infrastructure-systems/hygienic-infrastructure",
+                                "/solutions/complete-facilities/poultry-processing",
+                                "/solutions/operations-support/facility-management"
+                              ];
+                              const path = paths[index] || "/solutions";
+
+                              return (
+                                <Link
+                                  key={index}
+                                  to={path}
+                                  onClick={() => setIsPopoverOpen(false)}
+                                  className={`${
+                                    index === 1 ? 'bg-[#f8f7f7]' : ''
+                                  } relative rounded-[10px] w-full hover:bg-[#f8f7f7] transition-colors block`}
+                                >
+                                  <div className="flex flex-row items-center overflow-clip rounded-[inherit] size-full">
+                                    <div className="box-border content-stretch flex gap-[8px] items-center px-[12px] py-[16px] relative w-full">
+                                      <p className="basis-0 grow leading-[20px] min-h-px min-w-px overflow-ellipsis overflow-hidden relative shrink-0 text-[#121212] text-[16px] text-nowrap tracking-[-0.16px] text-left">
+                                        {text}
+                                      </p>
+                                    </div>
                                   </div>
-                                </div>
-                                {index === 1 && (
-                                  <div aria-hidden="true" className="absolute border border-[#ececec] border-solid inset-0 pointer-events-none rounded-[10px]" />
-                                )}
-                              </button>
-                            ))}
+                                  {index === 1 && (
+                                    <div aria-hidden="true" className="absolute border border-[#ececec] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                                  )}
+                                </Link>
+                              );
+                            })}
                           </div>
                         </div>
                       </div>

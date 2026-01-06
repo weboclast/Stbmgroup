@@ -34,9 +34,9 @@ export function FeaturedEquipment() {
                 </div>
               </Link>
               <CardContent className="p-6">
-                <div className="text-sm text-[#f97316] mb-2">{item.category}</div>
+                <div className="text-sm text-[#FF5757] mb-2">{item.category}</div>
                 <Link to={`/products/${item.id}`}>
-                  <h3 className="text-[#1e3a8a] mb-1 hover:text-[#f97316] transition-colors">{item.name}</h3>
+                  <h3 className="text-[#1e3a8a] mb-1 hover:text-[#FF5757] transition-colors">{item.name}</h3>
                 </Link>
                 <div className="text-sm text-gray-500 mb-3">Model: {item.model}</div>
                 <p className="text-gray-600 text-sm mb-6 line-clamp-2">{item.description}</p>
@@ -51,7 +51,7 @@ export function FeaturedEquipment() {
                   </Button>
                   <Button
                     size="sm"
-                    className={`gap-2 ${isInBasket(item.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-[#f97316] hover:bg-[#ea580c]'}`}
+                    className={`gap-2 ${isInBasket(item.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-[#FF5757] hover:bg-[#E04848]'}`}
                     onClick={() => addToBasket(item)}
                     disabled={isInBasket(item.id)}
                   >
@@ -74,7 +74,7 @@ export function FeaturedEquipment() {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-white gap-2" asChild>
+          <Button size="lg" variant="outline" className="border-[#FF5757] text-[#FF5757] hover:bg-[#FF5757] hover:text-white gap-2" asChild>
             <Link to="/products">
               View All Equipment
               <ArrowRight className="w-4 h-4" />

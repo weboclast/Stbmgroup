@@ -81,7 +81,7 @@ export function ProductDetail() {
 
           {/* Product Info */}
           <div>
-            <div className="text-sm text-[#f97316] mb-2">{product.category}</div>
+            <div className="text-sm text-[#FF5757] mb-2">{product.category}</div>
             <h1 className="text-[#1e3a8a] mb-2">{product.name}</h1>
             <div className="text-xl text-gray-700 mb-6">Model: {product.model}</div>
             
@@ -92,7 +92,7 @@ export function ProductDetail() {
               <ul className="space-y-3">
                 {product.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#f97316] flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -102,7 +102,7 @@ export function ProductDetail() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className={`flex-1 gap-2 ${isInBasket(product.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-[#f97316] hover:bg-[#ea580c]'}`}
+                className={`flex-1 gap-2 ${isInBasket(product.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-[#FF5757] hover:bg-[#E04848]'}`}
                 onClick={handleAddToBasket}
                 disabled={isInBasket(product.id)}
               >
@@ -160,9 +160,9 @@ export function ProductDetail() {
                     </div>
                   </Link>
                   <CardContent className="p-6">
-                    <div className="text-sm text-[#f97316] mb-2">{relatedProduct.category}</div>
+                    <div className="text-sm text-[#FF5757] mb-2">{relatedProduct.category}</div>
                     <Link to={`/products/${relatedProduct.id}`}>
-                      <h3 className="text-[#1e3a8a] mb-2 hover:text-[#f97316] transition-colors">
+                      <h3 className="text-[#1e3a8a] mb-2 hover:text-[#FF5757] transition-colors">
                         {relatedProduct.name}
                       </h3>
                     </Link>

@@ -40,18 +40,18 @@ export function SolutionFinder() {
                   onClick={() => setSelected(challenge.id)}
                   className={`p-4 rounded-lg border-2 text-left transition-all ${
                     selected === challenge.id
-                      ? 'border-[#f97316] bg-[#f97316]/5'
+                      ? 'border-[#FF5757] bg-[#FF5757]/5'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
                       selected === challenge.id
-                        ? 'border-[#f97316]'
+                        ? 'border-[#FF5757]'
                         : 'border-gray-300'
                     }`}>
                       {selected === challenge.id && (
-                        <div className="w-3 h-3 rounded-full bg-[#f97316]"></div>
+                        <div className="w-3 h-3 rounded-full bg-[#FF5757]"></div>
                       )}
                     </div>
                     <span className="text-gray-700">{challenge.label}</span>
@@ -62,7 +62,7 @@ export function SolutionFinder() {
 
             <Button 
               size="lg" 
-              className="bg-[#f97316] hover:bg-[#ea580c] text-white gap-2"
+              className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
               disabled={!selected}
               onClick={handleGetRecommendations}
             >

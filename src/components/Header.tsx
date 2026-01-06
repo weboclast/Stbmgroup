@@ -17,28 +17,27 @@ export function Header() {
     {
       title: "Complete Facilities",
       items: [
-        { name: "Cattle Slaughterhouse", link: "/products" },
-        { name: "Sheep & Goat", link: "/products" },
-        { name: "Poultry Processing", link: "/products" },
-        { name: "Deboning & Processing", link: "/products" }
+        { name: "Cattle Slaughterhouse", link: "/solutions/complete-facilities/cattle-slaughterhouse" },
+        { name: "Sheep & Goat", link: "/solutions/complete-facilities/sheep-goat-slaughterhouse" },
+        { name: "Poultry Processing", link: "/solutions/complete-facilities/poultry-processing" },
+        { name: "Deboning & Processing", link: "/solutions/complete-facilities/deboning-meat-processing" }
       ]
     },
     {
       title: "Infrastructure Systems",
       items: [
-        { name: "Environmental Systems", link: "/products" },
-        { name: "Climate & Refrigeration", link: "/products" },
-        { name: "Hygienic Infrastructure", link: "/products" },
-        { name: "Power & Automation", link: "/products" }
+        { name: "Wastewater Treatment", link: "/solutions/infrastructure-systems/wastewater-treatment" },
+        { name: "HVAC & Refrigeration", link: "/solutions/infrastructure-systems/hvac-and-refrigeration" },
+        { name: "Hygienic Infrastructure", link: "/solutions/infrastructure-systems/hygienic-infrastructure" },
+        { name: "Power & Automation", link: "/solutions/infrastructure-systems/power-and-automation" }
       ]
     },
     {
       title: "Operations & Support",
       items: [
-        { name: "Facility Management", link: "/products" },
-        { name: "Preventive Maintenance", link: "/products" },
-        { name: "24/7 Technical Support", link: "/products" },
-        { name: "Compliance Monitoring", link: "/products" }
+        { name: "Facility Management", link: "/solutions/operations-support/facility-management" },
+        { name: "Preventive Maintenance", link: "/solutions/operations-support/preventive-maintenance" },
+        { name: "24/7 Technical Support", link: "/solutions/operations-support/technical-support" }
       ]
     }
   ];
@@ -72,7 +71,7 @@ export function Header() {
             >
               <button
                 className={`flex items-center gap-1 transition-colors ${
-                  isActive('/products') ? 'text-[#1e3a8a]' : 'text-gray-700 hover:text-[#1e3a8a]'
+                  isActive('/solutions') ? 'text-[#1e3a8a]' : 'text-gray-700 hover:text-[#1e3a8a]'
                 }`}
               >
                 Solutions
@@ -92,7 +91,7 @@ export function Header() {
                               <li key={itemIdx}>
                                 <Link
                                   to={item.link}
-                                  className="text-sm text-gray-600 hover:text-[#f97316] transition-colors block"
+                                  className="text-sm text-gray-600 hover:text-[#FF5757] transition-colors block"
                                 >
                                   {item.name}
                                 </Link>
@@ -106,6 +105,13 @@ export function Header() {
                 </div>
               )}
             </div>
+
+            <Link 
+              to="/products" 
+              className={`transition-colors ${isActive('/products') ? 'text-[#1e3a8a]' : 'text-gray-700 hover:text-[#1e3a8a]'}`}
+            >
+              Equipments
+            </Link>
 
             <Link 
               to="/projects" 
@@ -134,7 +140,7 @@ export function Header() {
               <span>+971 XX XXX XXXX</span>
             </div>
             <EnquiryBasketButton />
-            <Button className="bg-[#f97316] hover:bg-[#ea580c]" asChild>
+            <Button className="bg-[#FF5757] hover:bg-[#E04848]" asChild>
               <Link to="/enquiry">Request Quote</Link>
             </Button>
           </div>
@@ -193,7 +199,7 @@ export function Header() {
               </Link>
               <div className="flex gap-2 mt-2">
                 <EnquiryBasketButton />
-                <Button className="bg-[#f97316] hover:bg-[#ea580c] flex-1" asChild>
+                <Button className="bg-[#FF5757] hover:bg-[#E04848] flex-1" asChild>
                   <Link to="/enquiry" onClick={() => setMobileMenuOpen(false)}>Request Quote</Link>
                 </Button>
               </div>

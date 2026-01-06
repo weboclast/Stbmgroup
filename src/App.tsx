@@ -11,6 +11,11 @@ import { Enquiry } from "./pages/Enquiry";
 import { Projects } from "./pages/Projects";
 import { Resources } from "./pages/Resources";
 import { About } from "./pages/About";
+import Solutions from "./pages/Solutions";
+import CompleteFacilities from "./pages/CompleteFacilities";
+import InfrastructureSystems from "./pages/InfrastructureSystems";
+import OperationsSupport from "./pages/OperationsSupport";
+import SolutionDetail from "./pages/SolutionDetail";
 
 export default function App() {
   return (
@@ -27,6 +32,13 @@ export default function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/about" element={<About />} />
+              
+              {/* Solutions Routes */}
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/solutions/complete-facilities" element={<CompleteFacilities />} />
+              <Route path="/solutions/infrastructure-systems" element={<InfrastructureSystems />} />
+              <Route path="/solutions/operations-support" element={<OperationsSupport />} />
+              <Route path="/solutions/:tier/:slug" element={<SolutionDetail />} />
             </Routes>
           </main>
           <Footer />

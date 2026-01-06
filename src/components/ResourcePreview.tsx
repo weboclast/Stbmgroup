@@ -44,8 +44,8 @@ export function ResourcePreview() {
               <div className="w-12 h-12 bg-[#1e3a8a]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#1e3a8a]/20 transition-colors">
                 <resource.icon className="w-6 h-6 text-[#1e3a8a]" />
               </div>
-              <div className="text-xs text-[#f97316] mb-2">{resource.type}</div>
-              <h3 className="text-sm text-[#1e3a8a] group-hover:text-[#f97316] transition-colors">{resource.title}</h3>
+              <div className="text-xs text-[#FF5757] mb-2">{resource.type}</div>
+              <h3 className="text-sm text-[#1e3a8a] group-hover:text-[#FF5757] transition-colors">{resource.title}</h3>
             </Link>
           ))}
         </div>

@@ -89,9 +89,9 @@ export function Products() {
                 </div>
               </Link>
               <CardContent className="p-6">
-                <div className="text-sm text-[#f97316] mb-2">{product.category}</div>
+                <div className="text-sm text-[#FF5757] mb-2">{product.category}</div>
                 <Link to={`/products/${product.id}`}>
-                  <h3 className="text-[#1e3a8a] mb-1 group-hover:text-[#f97316] transition-colors">
+                  <h3 className="text-[#1e3a8a] mb-1 group-hover:text-[#FF5757] transition-colors">
                     {product.name}
                   </h3>
                 </Link>
@@ -109,7 +109,7 @@ export function Products() {
                   </Button>
                   <Button
                     size="sm"
-                    className={`gap-2 ${isInBasket(product.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-[#f97316] hover:bg-[#ea580c]'}`}
+                    className={`gap-2 ${isInBasket(product.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-[#FF5757] hover:bg-[#E04848]'}`}
                     onClick={() => addToBasket(product)}
                     disabled={isInBasket(product.id)}
                   >
