@@ -84,7 +84,7 @@ export function Header() {
                     <div className="grid grid-cols-3 gap-8">
                       {megaMenuSolutions.map((column, idx) => (
                         <div key={idx}>
-                          <h3 className="text-[#1e3a8a] mb-4">{column.title}</h3>
+                          <h3 className="h4 text-[#1e3a8a] mb-4">{column.title}</h3>
                           <ul className="space-y-3">
                             {column.items.map((item, itemIdx) => (
                               <li key={itemIdx}>

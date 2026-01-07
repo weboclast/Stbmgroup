@@ -40,7 +40,7 @@ export function FinalCTA() {
                 <div className="w-12 h-12 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-[#FF5757]" />
                 </div>
-                <h3 className="text-[#1e3a8a] mb-2">Schedule a Consultation</h3>
+                <h3 className="h5 text-[#1e3a8a] mb-2">Schedule a Consultation</h3>
                 <p className="text-sm text-gray-600 mb-4">Free facility assessment</p>
                 <Button 
                   size="sm" 
@@ -56,7 +56,7 @@ export function FinalCTA() {
                 <div className="w-12 h-12 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Download className="w-6 h-6 text-[#FF5757]" />
                 </div>
-                <h3 className="text-[#1e3a8a] mb-2">Download Solutions Guide</h3>
+                <h3 className="h5 text-[#1e3a8a] mb-2">Download Solutions Guide</h3>
                 <p className="text-sm text-gray-600 mb-4">2024 Food Processing Handbook</p>
                 <Button 
                   size="sm" 
@@ -72,7 +72,7 @@ export function FinalCTA() {
                 <div className="w-12 h-12 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MessageSquare className="w-6 h-6 text-[#FF5757]" />
                 </div>
-                <h3 className="text-[#1e3a8a] mb-2">WhatsApp an Expert</h3>
+                <h3 className="h5 text-[#1e3a8a] mb-2">WhatsApp an Expert</h3>
                 <p className="text-sm text-gray-600 mb-4">Quick questions answered instantly</p>
                 <Button 
                   size="sm" 
@@ -93,7 +93,7 @@ export function FinalCTA() {
             <div className="grid md:grid-cols-2">
               {/* Left Side - Form */}
               <div className="p-8 md:p-10 bg-white">
-                <h3 className="text-[#1e3a8a] mb-2">Ready to Transform Your Operations?</h3>
+                <h3 className="h5 text-[#1e3a8a] mb-2">Ready to Transform Your Operations?</h3>
                 <p className="text-gray-600 mb-6">
                   Join 100+ businesses that have revolutionized their food production with STBM solutions.
                 </p>
@@ -178,7 +178,7 @@ export function FinalCTA() {
 
               {/* Right Side - Contact Info */}
               <div className="p-8 md:p-10 text-white">
-                <h3 className="text-white mb-6">Get in Touch</h3>
+                <h3 className="h2 text-white mb-6">Get in Touch</h3>
                 
                 <div className="space-y-6 mb-8">
                   <div className="flex gap-4">

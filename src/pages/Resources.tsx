@@ -115,7 +115,7 @@ export function Resources() {
       {/* Header */}
       <section className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-white mb-4">Resource Center</h1>
+          <h1 className="h1 text-white mb-4">Resource Center</h1>
           <p className="text-blue-100 max-w-2xl">
             Download product catalogs, technical documentation, case studies, and training materials. 
             All resources are available free of charge.
@@ -127,7 +127,7 @@ export function Resources() {
       <div className="container mx-auto px-4 py-16">
         {resources.map((category, catIndex) => (
           <div key={catIndex} className="mb-16 last:mb-0">
-            <h2 className="text-[#1e3a8a] mb-8">{category.category}</h2>
+            <h2 className="h2 text-[#1e3a8a] mb-8">{category.category}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {category.items.map((item, itemIndex) => (
                 <Card key={itemIndex} className="hover:shadow-lg transition-shadow">
@@ -137,7 +137,7 @@ export function Resources() {
                         <item.icon className="w-6 h-6 text-[#f97316]" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-[#1e3a8a] mb-2">{item.title}</h3>
+                        <h3 className="h4 text-[#1e3a8a] mb-2">{item.title}</h3>
                         <p className="text-sm text-gray-600 mb-3">{item.description}</p>
                         <div className="flex items-center justify-between">
                           <div className="text-xs text-gray-500">
@@ -163,7 +163,7 @@ export function Resources() {
         <div className="container mx-auto px-4">
           <Card className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white">
             <CardContent className="p-12 text-center">
-              <h2 className="text-white mb-4">Need Custom Documentation?</h2>
+              <h2 className="h2 text-white mb-4">Need Custom Documentation?</h2>
               <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
                 Our technical team can provide customized specifications, drawings, 
                 and documentation tailored to your specific project requirements.

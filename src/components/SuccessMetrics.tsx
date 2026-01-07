@@ -22,7 +22,7 @@ export function SuccessMetrics() {
     <section className="py-16 bg-gradient-to-br from-[#1e3a8a] to-[#172554] text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-white mb-2">Results That Speak</h2>
+          <h2 className="h2 text-white mb-2">Results That Speak</h2>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">

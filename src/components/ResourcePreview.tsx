@@ -30,7 +30,7 @@ export function ResourcePreview() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-[#1e3a8a] mb-4">Knowledge That Empowers</h2>
+          <h2 className="h2 text-[#1e3a8a] mb-4">Knowledge That Empowers</h2>
           <p className="text-gray-600">Featured Resources</p>
         </div>
 
@@ -45,7 +45,7 @@ export function ResourcePreview() {
                 <resource.icon className="w-6 h-6 text-[#1e3a8a]" />
               </div>
               <div className="text-xs text-[#FF5757] mb-2">{resource.type}</div>
-              <h3 className="text-sm text-[#1e3a8a] group-hover:text-[#FF5757] transition-colors">{resource.title}</h3>
+              <h3 className="h5 text-[#1e3a8a] group-hover:text-[#FF5757] transition-colors">{resource.title}</h3>
             </Link>
           ))}
         </div>

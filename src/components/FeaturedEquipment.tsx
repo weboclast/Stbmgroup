@@ -14,7 +14,7 @@ export function FeaturedEquipment() {
     <section id="equipment" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-[#1e3a8a] mb-4">Featured Equipment</h2>
+          <h2 className="h2 text-[#1e3a8a] mb-4">Featured Equipment</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Browse our selection of industrial-grade food processing equipment. 
             All equipment backed by warranty and professional installation services.
@@ -36,7 +36,7 @@ export function FeaturedEquipment() {
               <CardContent className="p-6">
                 <div className="text-sm text-[#FF5757] mb-2">{item.category}</div>
                 <Link to={`/products/${item.id}`}>
-                  <h3 className="text-[#1e3a8a] mb-1 hover:text-[#FF5757] transition-colors">{item.name}</h3>
+                  <h3 className="h5 text-[#1e3a8a] mb-1 hover:text-[#FF5757] transition-colors">{item.name}</h3>
                 </Link>
                 <div className="text-sm text-gray-500 mb-3">Model: {item.model}</div>
                 <p className="text-gray-600 text-sm mb-6 line-clamp-2">{item.description}</p>

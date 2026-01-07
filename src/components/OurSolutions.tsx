@@ -50,7 +50,7 @@ export function OurSolutions() {
                 🏭
               </div>
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-2">For the Builder</div>
-              <h3 className="text-xl font-semibold tracking-tight text-[#1e3a8a] mb-3">Build Your Entire Facility</h3>
+              <h3 className="h4 text-[#1e3a8a] mb-3">Build Your Entire Facility</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 From empty land to the first production shift, STBM delivers turnkey facilities that work. We manage everything—design, equipment, infrastructure, installation, commissioning, and training—all integrated under one contract and one accountable team.
               </p>
@@ -94,7 +94,7 @@ export function OurSolutions() {
                 ⚙️
               </div>
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-2">For the Fixer</div>
-              <h3 className="text-xl font-semibold tracking-tight text-[#1e3a8a] mb-3">Upgrade Your Infrastructure</h3>
+              <h3 className="h4 text-[#1e3a8a] mb-3">Upgrade Your Infrastructure</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Need to meet new wastewater standards? Is your refrigeration system failing? STBM delivers specialized infrastructure solutions that integrate seamlessly with your current operations, often without disrupting production.
               </p>
@@ -138,7 +138,7 @@ export function OurSolutions() {
                 🔧
               </div>
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-2">For the Operator</div>
-              <h3 className="text-xl font-semibold tracking-tight text-[#1e3a8a] mb-3">Optimize Your Operations</h3>
+              <h3 className="h4 text-[#1e3a8a] mb-3">Optimize Your Operations</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Your facility is only as good as how well it runs. Our operations and support programs keep your equipment performing, your compliance intact, and your downtime minimal, so you can focus on production.
               </p>

@@ -70,7 +70,7 @@ export default function Solutions() {
               <span className="text-sm">Three Solution Tiers • One Trusted Partner</span>
             </div>
 
-            <h1 className="text-white mb-6">
+            <h1 className="h1 text-white mb-6">
               Integrated Solutions for Every Challenge
             </h1>
             
@@ -106,7 +106,7 @@ export default function Solutions() {
                   {/* Content */}
                   <CardContent className={`p-8 md:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'md:col-start-1' : ''}`}>
                     <div className="mb-4">
-                      <h2 className="text-[#1e3a8a] mb-2">
+                      <h2 className="h2 text-[#1e3a8a] mb-2">
                         {tier.title}
                       </h2>
                       <p className="text-gray-600 italic">
@@ -152,7 +152,7 @@ export default function Solutions() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-[#1e3a8a] mb-6">
+            <h2 className="h2 text-[#1e3a8a] mb-6">
               Not Sure Which Solution You Need?
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">

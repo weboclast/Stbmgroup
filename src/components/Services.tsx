@@ -28,7 +28,7 @@ export function Services() {
     <section id="solutions" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-[#1e3a8a] mb-4">What We Do</h2>
+          <h2 className="h2 text-[#1e3a8a] mb-4">What We Do</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Comprehensive food processing solutions tailored to your specific needs. 
             From single equipment to complete factory installations.
@@ -44,7 +44,7 @@ export function Services() {
               <div className="w-14 h-14 bg-[#FF5757]/10 rounded-lg flex items-center justify-center mb-6">
                 <service.icon className="w-7 h-7 text-[#FF5757]" />
               </div>
-              <h3 className="text-[#1e3a8a] mb-3">{service.title}</h3>
+              <h3 className="h4 text-[#1e3a8a] mb-3">{service.title}</h3>
               <p className="text-gray-600 text-sm">{service.description}</p>
             </div>
           ))}

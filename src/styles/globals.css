@@ -189,3 +189,101 @@
 html {
   font-size: var(--font-size);
 }
+/**
+ * Typography Utility Classes - Design System
+ * Consistent sizing and styling across all headings, body text, buttons, labels, and forms
+ */
+@layer components {
+  /* Headings */
+  .h1 {
+    @apply text-4xl sm:text-5xl font-bold tracking-tight leading-tight;
+  }
+
+  .h2 {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight leading-snug;
+  }
+
+  .h3 {
+    @apply text-2xl font-semibold tracking-tight leading-snug;
+  }
+
+  .h4 {
+    @apply text-xl font-semibold tracking-tight leading-normal;
+  }
+
+  .h5 {
+    @apply text-lg font-semibold leading-normal;
+  }
+
+  .h6 {
+    @apply text-base font-semibold leading-normal;
+  }
+
+  /* Body Text */
+  .body-base {
+    @apply text-base leading-relaxed;
+  }
+
+  .body-sm {
+    @apply text-sm leading-relaxed;
+  }
+
+  .body-xs {
+    @apply text-xs leading-relaxed;
+  }
+
+  /* Label & Caption */
+  .label {
+    @apply text-sm font-medium leading-none;
+  }
+
+  .label-sm {
+    @apply text-xs font-medium uppercase tracking-wider leading-none;
+  }
+
+  .caption {
+    @apply text-xs font-normal text-muted-foreground leading-snug;
+  }
+
+  /* Button Text */
+  .btn-text {
+    @apply text-sm font-medium;
+  }
+
+  .btn-text-sm {
+    @apply text-xs font-medium;
+  }
+
+  /* Form & Input */
+  .input-label {
+    @apply text-sm font-medium text-foreground;
+  }
+
+  .input-helper {
+    @apply text-xs font-normal text-muted-foreground;
+  }
+
+  .input-placeholder {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* Overline (small caps, decorative) */
+  .overline {
+    @apply text-xs font-bold uppercase tracking-widest;
+  }
+
+  /* Tagline / Subtitle */
+  .tagline {
+    @apply text-lg font-medium text-muted-foreground;
+  }
+
+  /* Error Text */
+  .error-text {
+    @apply text-xs font-medium text-destructive;
+  }
+
+  /* Success Text */
+  .success-text {
+    @apply text-xs font-medium text-green-600;
+  }
+}

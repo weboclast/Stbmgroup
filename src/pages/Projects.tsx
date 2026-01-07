@@ -104,7 +104,7 @@ export function Projects() {
       {/* Header */}
       <section className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-white mb-4">Our Projects</h1>
+          <h1 className="h1 text-white mb-4">Our Projects</h1>
           <p className="text-blue-100 max-w-2xl">
             Proven track record of 100+ successful installations across the UAE. 
             From single equipment to complete turnkey facilities.
@@ -157,7 +157,7 @@ export function Projects() {
                     <Badge variant="outline">{project.scope}</Badge>
                   </div>
                   
-                  <h3 className="text-[#1e3a8a] mb-3">{project.name}</h3>
+                  <h3 className="h4 text-[#1e3a8a] mb-3">{project.name}</h3>
                   
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
                     <div className="flex items-center gap-1">
@@ -193,7 +193,7 @@ export function Projects() {
       {/* CTA */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-[#1e3a8a] mb-4">Ready to Start Your Project?</h2>
+          <h2 className="h2 text-[#1e3a8a] mb-4">Ready to Start Your Project?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Let's discuss your food processing requirements and create a customized solution for your facility.
           </p>

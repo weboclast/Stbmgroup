@@ -26,7 +26,7 @@ export function Products() {
       {/* Header Section */}
       <section className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-white mb-4">Industrial Equipment Catalog</h1>
+          <h1 className="h1 text-white mb-4">Industrial Equipment Catalog</h1>
           <p className="text-blue-100 max-w-2xl">
             Browse our complete range of food processing equipment. Click "Add to Enquiry" to request quotes for multiple items.
           </p>

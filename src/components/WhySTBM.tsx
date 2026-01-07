@@ -34,7 +34,7 @@ export function WhySTBM() {
 
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="text-white mb-4">Why Leaders Choose STBM</h2>
+          <h2 className="h2 text-white mb-4">Why Leaders Choose STBM</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -43,7 +43,7 @@ export function WhySTBM() {
               <div className="w-14 h-14 bg-[#f97316] rounded-lg flex items-center justify-center mb-4">
                 <reason.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-white mb-3">{reason.title}</h3>
+              <h3 className="h5 text-white mb-3">{reason.title}</h3>
               <p className="text-blue-100 text-sm">{reason.description}</p>
             </div>
           ))}

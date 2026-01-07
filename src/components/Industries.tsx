@@ -30,7 +30,7 @@ export function Industries() {
     <section id="industries" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
-          <h2 className="text-[#1e3a8a] mb-4">Specialized Solutions for Every Sector</h2>
+          <h2 className="h2 text-[#1e3a8a] mb-4">Specialized Solutions for Every Sector</h2>
         </div>
         
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -46,7 +46,7 @@ export function Industries() {
               <div className="w-16 h-16 bg-[#1e3a8a]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <industry.icon className="w-8 h-8 text-[#1e3a8a]" />
               </div>
-              <h3 className="text-[#1e3a8a] mb-3">{industry.title}</h3>
+              <h3 className="h4 text-[#1e3a8a] mb-3">{industry.title}</h3>
               <p className="text-gray-600 text-sm">{industry.description}</p>
             </div>
           ))}
