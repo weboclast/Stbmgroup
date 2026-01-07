@@ -11,6 +11,7 @@ import { Enquiry } from "./pages/Enquiry";
 import { Projects } from "./pages/Projects";
 import { Resources } from "./pages/Resources";
 import { About } from "./pages/About";
+import { StyleGuide } from "./pages/StyleGuide";
 import Solutions from "./pages/Solutions";
 import CompleteFacilities from "./pages/CompleteFacilities";
 import InfrastructureSystems from "./pages/InfrastructureSystems";
@@ -32,6 +33,7 @@ export default function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/about" element={<About />} />
+              <Route path="/style-guide" element={<StyleGuide />} />
               
               {/* Solutions Routes */}
               <Route path="/solutions" element={<Solutions />} />

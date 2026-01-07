@@ -192,98 +192,154 @@ html {
 /**
  * Typography Utility Classes - Design System
  * Consistent sizing and styling across all headings, body text, buttons, labels, and forms
+ * Using explicit sizes to ensure proper scaling
  */
 @layer components {
-  /* Headings */
+  /* Headings - Explicit sizing */
   .h1 {
-    @apply text-4xl sm:text-5xl font-bold tracking-tight leading-tight;
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  
+  @media (min-width: 640px) {
+    .h1 {
+      font-size: 3rem;
+    }
   }
 
   .h2 {
-    @apply text-3xl sm:text-4xl font-bold tracking-tight leading-snug;
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.33;
+  }
+  
+  @media (min-width: 640px) {
+    .h2 {
+      font-size: 2.25rem;
+    }
   }
 
   .h3 {
-    @apply text-2xl font-semibold tracking-tight leading-snug;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
   }
 
   .h4 {
-    @apply text-xl font-semibold tracking-tight leading-normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
   }
 
   .h5 {
-    @apply text-lg font-semibold leading-normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5;
   }
 
   .h6 {
-    @apply text-base font-semibold leading-normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
   }
 
   /* Body Text */
   .body-base {
-    @apply text-base leading-relaxed;
+    font-size: 1rem;
+    line-height: 1.625;
   }
 
   .body-sm {
-    @apply text-sm leading-relaxed;
+    font-size: 0.875rem;
+    line-height: 1.625;
   }
 
   .body-xs {
-    @apply text-xs leading-relaxed;
+    font-size: 0.75rem;
+    line-height: 1.625;
   }
 
   /* Label & Caption */
   .label {
-    @apply text-sm font-medium leading-none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
   }
 
   .label-sm {
-    @apply text-xs font-medium uppercase tracking-wider leading-none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1;
   }
 
   .caption {
-    @apply text-xs font-normal text-muted-foreground leading-snug;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--muted-foreground);
+    line-height: 1.4;
   }
 
   /* Button Text */
   .btn-text {
-    @apply text-sm font-medium;
+    font-size: 0.875rem;
+    font-weight: 500;
   }
 
   .btn-text-sm {
-    @apply text-xs font-medium;
+    font-size: 0.75rem;
+    font-weight: 500;
   }
 
   /* Form & Input */
   .input-label {
-    @apply text-sm font-medium text-foreground;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--foreground);
   }
 
   .input-helper {
-    @apply text-xs font-normal text-muted-foreground;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--muted-foreground);
   }
 
   .input-placeholder {
-    @apply text-sm text-muted-foreground;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
   }
 
   /* Overline (small caps, decorative) */
   .overline {
-    @apply text-xs font-bold uppercase tracking-widest;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 
   /* Tagline / Subtitle */
   .tagline {
-    @apply text-lg font-medium text-muted-foreground;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
   }
 
   /* Error Text */
   .error-text {
-    @apply text-xs font-medium text-destructive;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--destructive);
   }
 
   /* Success Text */
   .success-text {
-    @apply text-xs font-medium text-green-600;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #16a34a;
   }
 }
