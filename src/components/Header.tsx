@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import { Menu, Phone, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/stbm-logo.svg";
 import { EnquiryBasketButton } from "./EnquiryBasketButton";
 
 export function Header() {
@@ -47,11 +48,9 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="flex flex-col">
-              <span className="text-[#1e3a8a] tracking-wider">STBM</span>
-              <span className="text-gray-600 text-xs">Food Technology</span>
-            </div>
+          <Link to="/" className="flex items-center" aria-label="STBM Home">
+            <img src={logo} alt="STBM Food Technology" className="h-10 w-auto" loading="lazy" />
+            <span className="sr-only">STBM Food Technology</span>
           </Link>
 
           {/* Desktop Navigation */}

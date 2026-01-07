@@ -1,0 +1,12 @@
+node_modules
+# Build outputs
+build
+dist
+
+# macOS system files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
