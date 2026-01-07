@@ -53,7 +53,7 @@ export function Hero() {
 
         {/* Main Heading and Content */}
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h1 className="text-white mb-6 tracking-tight">
+          <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl text-white mb-6">
             Your Trusted Food Tech Solutions Partner
           </h1>
           
