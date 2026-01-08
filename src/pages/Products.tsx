@@ -24,10 +24,10 @@ export function Products() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white py-16">
+      <section className="bg-gradient-to-r from-neutral-10 to-neutral-9 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="h1 text-white mb-4">Industrial Equipment Catalog</h1>
-          <p className="text-blue-100 max-w-2xl">
+          <p className="text-neutral-1 max-w-2xl">
             Browse our complete range of food processing equipment. Click "Add to Enquiry" to request quotes for multiple items.
           </p>
         </div>
@@ -59,7 +59,7 @@ export function Products() {
                     variant={selectedCategory === category ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory(category)}
-                    className={selectedCategory === category ? "bg-[#1e3a8a] hover:bg-[#172554]" : ""}
+                    className={selectedCategory === category ? "bg-neutral-10 hover:bg-neutral-9" : ""}
                   >
                     {category}
                   </Button>
@@ -89,9 +89,9 @@ export function Products() {
                 </div>
               </Link>
               <CardContent className="p-6">
-                <div className="text-sm text-[#FF5757] mb-2">{product.category}</div>
+                <div className="text-sm text-primary-5 mb-2">{product.category}</div>
                 <Link to={`/products/${product.id}`}>
-                  <h3 className="text-[#1e3a8a] mb-1 group-hover:text-[#FF5757] transition-colors">
+                  <h3 className="text-neutral-10 mb-1 group-hover:text-primary-5 transition-colors">
                     {product.name}
                   </h3>
                 </Link>
@@ -102,14 +102,14 @@ export function Products() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex-1 border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white"
+                    className="flex-1 border-neutral-10 text-neutral-10 hover:bg-neutral-10 hover:text-white"
                     asChild
                   >
                     <Link to={`/products/${product.id}`}>View Details</Link>
                   </Button>
                   <Button
                     size="sm"
-                    className={`gap-2 ${isInBasket(product.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-[#FF5757] hover:bg-[#E04848]'}`}
+                    className={`gap-2 ${isInBasket(product.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-primary-5 hover:bg-primary-6'}`}
                     onClick={() => addToBasket(product)}
                     disabled={isInBasket(product.id)}
                   >

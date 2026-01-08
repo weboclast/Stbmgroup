@@ -35,7 +35,7 @@ export function OurSolutions() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="h2 text-[#1e3a8a] mb-4">Tailored Solutions for Every Challenge</h2>
+          <h2 className="h2 text-neutral-10 mb-4">Tailored Solutions for Every Challenge</h2>
           <p className="text-gray-600 text-lg">
             Whether you're building from the ground up, upgrading critical systems, or optimizing daily operations—STBM brings the expertise, integration, and accountability you need.
           </p>
@@ -44,13 +44,13 @@ export function OurSolutions() {
         {/* Solution Cards Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* 1. Complete Slaughterhouse Facilities */}
-          <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-[#FF5757]/30">
+          <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-primary-5/30">
             <div className="mb-6">
-              <div className="w-16 h-16 bg-[#1e3a8a] rounded-xl flex items-center justify-center mb-4 text-3xl">
+              <div className="w-16 h-16 bg-neutral-10 rounded-xl flex items-center justify-center mb-4 text-3xl">
                 🏭
               </div>
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-2">For the Builder</div>
-              <h3 className="h4 text-[#1e3a8a] mb-3">Build Your Entire Facility</h3>
+              <h3 className="h4 text-neutral-10 mb-3">Build Your Entire Facility</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 From empty land to the first production shift, STBM delivers turnkey facilities that work. We manage everything—design, equipment, infrastructure, installation, commissioning, and training—all integrated under one contract and one accountable team.
               </p>
@@ -60,19 +60,19 @@ export function OurSolutions() {
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-3">Includes:</div>
               <ul className="space-y-2.5 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span>Process design and layout optimization</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span>Slaughter and processing equipment</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span>Wastewater treatment and HVAC systems</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span>Installation, training, and operational handover</span>
                 </li>
               </ul>
@@ -80,7 +80,7 @@ export function OurSolutions() {
 
             <Link 
               to="/solutions/complete-facilities" 
-              className="inline-flex items-center gap-2 text-[#FF5757] hover:text-[#E04848] transition-colors group"
+              className="inline-flex items-center gap-2 text-primary-5 hover:text-primary-6 transition-colors group"
             >
               <span className="text-sm">Explore Turnkey Solutions</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -88,13 +88,13 @@ export function OurSolutions() {
           </div>
 
           {/* 2. Critical Infrastructure Systems */}
-          <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-[#FF5757]/30">
+          <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-primary-5/30">
             <div className="mb-6">
-              <div className="w-16 h-16 bg-[#1e3a8a] rounded-xl flex items-center justify-center mb-4 text-3xl">
+              <div className="w-16 h-16 bg-neutral-10 rounded-xl flex items-center justify-center mb-4 text-3xl">
                 ⚙️
               </div>
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-2">For the Fixer</div>
-              <h3 className="h4 text-[#1e3a8a] mb-3">Upgrade Your Infrastructure</h3>
+              <h3 className="h4 text-neutral-10 mb-3">Upgrade Your Infrastructure</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Need to meet new wastewater standards? Is your refrigeration system failing? STBM delivers specialized infrastructure solutions that integrate seamlessly with your current operations, often without disrupting production.
               </p>
@@ -104,19 +104,19 @@ export function OurSolutions() {
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-3">Systems:</div>
               <ul className="space-y-2.5 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span><strong>Environmental:</strong> Wastewater Treatment, Biogas Recovery</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span><strong>Climate:</strong> HVAC, Cold Rooms & Refrigeration</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span><strong>Hygienic:</strong> Monile Flooring, Industrial Drains</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span><strong>Power:</strong> Electrical Systems, Automation & Controls</span>
                 </li>
               </ul>
@@ -124,7 +124,7 @@ export function OurSolutions() {
 
             <Link 
               to="/solutions/infrastructure-systems" 
-              className="inline-flex items-center gap-2 text-[#FF5757] hover:text-[#E04848] transition-colors group"
+              className="inline-flex items-center gap-2 text-primary-5 hover:text-primary-6 transition-colors group"
             >
               <span className="text-sm">Browse Infrastructure Systems</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -132,13 +132,13 @@ export function OurSolutions() {
           </div>
 
           {/* 3. Facility Operations & Support */}
-          <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-[#FF5757]/30">
+          <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-primary-5/30">
             <div className="mb-6">
-              <div className="w-16 h-16 bg-[#1e3a8a] rounded-xl flex items-center justify-center mb-4 text-3xl">
+              <div className="w-16 h-16 bg-neutral-10 rounded-xl flex items-center justify-center mb-4 text-3xl">
                 🔧
               </div>
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-2">For the Operator</div>
-              <h3 className="h4 text-[#1e3a8a] mb-3">Optimize Your Operations</h3>
+              <h3 className="h4 text-neutral-10 mb-3">Optimize Your Operations</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Your facility is only as good as how well it runs. Our operations and support programs keep your equipment performing, your compliance intact, and your downtime minimal, so you can focus on production.
               </p>
@@ -148,19 +148,19 @@ export function OurSolutions() {
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-3">Services:</div>
               <ul className="space-y-2.5 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span>Complete Facility Management Contracts</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span>Preventive Maintenance Programs</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span>24/7 Emergency Technical Support</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#FF5757] mt-0.5 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-primary-5 mt-0.5 flex-shrink-0" />
                   <span>HACCP Compliance Monitoring & Audits</span>
                 </li>
               </ul>
@@ -168,7 +168,7 @@ export function OurSolutions() {
 
             <Link 
               to="/solutions/operations-support" 
-              className="inline-flex items-center gap-2 text-[#FF5757] hover:text-[#E04848] transition-colors group"
+              className="inline-flex items-center gap-2 text-primary-5 hover:text-primary-6 transition-colors group"
             >
               <span className="text-sm">View Support Programs</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

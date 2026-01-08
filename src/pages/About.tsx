@@ -8,10 +8,10 @@ export function About() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white py-16">
+      <section className="bg-gradient-to-r from-neutral-10 to-neutral-9 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="h1 text-white mb-4">About STBM</h1>
-          <p className="text-blue-100 max-w-2xl">
+          <p className="text-neutral-1 max-w-2xl">
             Leading the food processing industry in UAE for over 27 years with expertise, 
             innovation, and commitment to excellence.
           </p>
@@ -23,7 +23,7 @@ export function About() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="h2 text-[#1e3a8a] mb-6">Our Story</h2>
+              <h2 className="h2 text-neutral-10 mb-6">Our Story</h2>
               <p className="text-gray-600 mb-4">
                 Since 1997, STBM Food Technology has been at the forefront of food processing 
                 solutions in the United Arab Emirates. What started as a small equipment supplier 
@@ -59,10 +59,10 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardContent className="p-8">
-                <div className="w-14 h-14 bg-[#FF5757]/10 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-[#FF5757]" />
+                <div className="w-14 h-14 bg-primary-5/10 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="w-7 h-7 text-primary-5" />
                 </div>
-                <h3 className="h4 text-[#1e3a8a] mb-4">Our Mission</h3>
+                <h3 className="h4 text-neutral-10 mb-4">Our Mission</h3>
                 <p className="text-gray-600">
                   To empower food processing businesses with world-class equipment and solutions 
                   that enhance productivity, ensure food safety, and drive operational excellence. 
@@ -74,10 +74,10 @@ export function About() {
 
             <Card>
               <CardContent className="p-8">
-                <div className="w-14 h-14 bg-[#FF5757]/10 rounded-lg flex items-center justify-center mb-6">
-                  <Lightbulb className="w-7 h-7 text-[#FF5757]" />
+                <div className="w-14 h-14 bg-primary-5/10 rounded-lg flex items-center justify-center mb-6">
+                  <Lightbulb className="w-7 h-7 text-primary-5" />
                 </div>
-                <h3 className="h4 text-[#1e3a8a] mb-4">Our Vision</h3>
+                <h3 className="h4 text-neutral-10 mb-4">Our Vision</h3>
                 <p className="text-gray-600">
                   To be the most trusted and innovative food processing solutions provider in the 
                   Middle East, recognized for our technical expertise, customer-centric approach, 
@@ -92,7 +92,7 @@ export function About() {
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="h2 text-[#1e3a8a] mb-12 text-center">Why Choose STBM</h2>
+          <h2 className="h2 text-neutral-10 mb-12 text-center">Why Choose STBM</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -118,10 +118,10 @@ export function About() {
             ].map((item, index) => (
               <Card key={index}>
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-8 h-8 text-[#FF5757]" />
+                  <div className="w-16 h-16 bg-primary-5/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-8 h-8 text-primary-5" />
                   </div>
-                  <h3 className="h5 text-[#1e3a8a] mb-3">{item.title}</h3>
+                  <h3 className="h5 text-neutral-10 mb-3">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.description}</p>
                 </CardContent>
               </Card>
@@ -133,7 +133,7 @@ export function About() {
       {/* Values */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="h2 text-[#1e3a8a] mb-12 text-center">Our Core Values</h2>
+          <h2 className="h2 text-neutral-10 mb-12 text-center">Our Core Values</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
@@ -163,7 +163,7 @@ export function About() {
             ].map((value, index) => (
               <Card key={index}>
                 <CardContent className="p-6">
-                  <h3 className="text-[#1e3a8a] mb-3">{value.title}</h3>
+                  <h3 className="text-neutral-10 mb-3">{value.title}</h3>
                   <p className="text-gray-600 text-sm">{value.description}</p>
                 </CardContent>
               </Card>
@@ -175,13 +175,13 @@ export function About() {
       {/* CTA */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-[#1e3a8a] mb-4">Partner With STBM</h2>
+          <h2 className="text-neutral-10 mb-4">Partner With STBM</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Join the many successful food processing businesses that trust STBM for their equipment 
             and facility needs. Let's discuss how we can help your operation thrive.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-[#FF5757] hover:bg-[#E04848]" asChild>
+            <Button size="lg" className="bg-primary-5 hover:bg-primary-6" asChild>
               <Link to="/enquiry">Get Started</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>

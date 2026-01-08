@@ -93,7 +93,7 @@ export default function SolutionDetail() {
       </div>
 
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-[#12141d] to-[#1e3a8a] text-white py-16 md:py-24">
+      <section className="relative bg-gradient-to-br from-neutral-8 to-neutral-10 text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5 mb-6">
@@ -112,7 +112,7 @@ export default function SolutionDetail() {
               <div className="grid grid-cols-3 gap-6 md:gap-8 bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8">
                 {solution.hero.stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-[#FF5757] mb-2">{stat.value}</div>
+                    <div className="text-primary-5 mb-2">{stat.value}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
                   </div>
                 ))}
@@ -128,7 +128,7 @@ export default function SolutionDetail() {
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
             {/* Challenge */}
             <div>
-              <h2 className="h2 text-[#1e3a8a] mb-4">
+              <h2 className="h2 text-neutral-10 mb-4">
                 {solution.challenge.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -138,7 +138,7 @@ export default function SolutionDetail() {
 
             {/* Solution */}
             <div>
-              <h2 className="h2 text-[#1e3a8a] mb-4">
+              <h2 className="h2 text-neutral-10 mb-4">
                 {solution.solution.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -153,7 +153,7 @@ export default function SolutionDetail() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="h2 text-[#1e3a8a] mb-8 text-center">
+            <h2 className="h2 text-neutral-10 mb-8 text-center">
               {solution.included.title}
             </h2>
             
@@ -163,7 +163,7 @@ export default function SolutionDetail() {
                   key={index}
                   className="flex items-start gap-3 bg-white rounded-xl p-4"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-5 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700">{item}</span>
                 </div>
               ))}
@@ -172,7 +172,7 @@ export default function SolutionDetail() {
             <div className="text-center">
               <Button 
                 size="lg"
-                className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
+                className="bg-primary-5 hover:bg-primary-6 text-white gap-2"
                 onClick={handleAddToBasket}
               >
                 <Plus className="w-4 h-4" />
@@ -188,7 +188,7 @@ export default function SolutionDetail() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-[#1e3a8a] rounded-2xl p-8 md:p-12 text-white">
+              <div className="bg-neutral-10 rounded-2xl p-8 md:p-12 text-white">
                 <h2 className="h2 text-white mb-6">
                   {solution.caseExample.title}
                 </h2>
@@ -199,7 +199,7 @@ export default function SolutionDetail() {
                 <div className="grid md:grid-cols-3 gap-6">
                   {solution.caseExample.results.map((result, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-primary-5 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-300">{result}</span>
                     </div>
                   ))}
@@ -215,7 +215,7 @@ export default function SolutionDetail() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="h2 text-[#1e3a8a] mb-8 text-center">
+              <h2 className="h2 text-neutral-10 mb-8 text-center">
                 Related Solutions
               </h2>
               
@@ -223,12 +223,12 @@ export default function SolutionDetail() {
                 {relatedSolutions.map((related) => (
                   <Card key={related!.id} className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow">
                     <CardContent className="p-6">
-                      <h3 className="text-[#1e3a8a] mb-3">{related!.title}</h3>
+                      <h3 className="text-neutral-10 mb-3">{related!.title}</h3>
                       <p className="text-sm text-gray-600 mb-4">{related!.description}</p>
                       <Button 
                         asChild
                         variant="outline"
-                        className="w-full border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white gap-2"
+                        className="w-full border-neutral-10 text-neutral-10 hover:bg-neutral-10 hover:text-white gap-2"
                       >
                         <Link to={`/solutions/${getSolutionDetail(related!.slug)?.tier}/${related!.slug}`}>
                           Learn More

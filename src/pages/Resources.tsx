@@ -113,10 +113,10 @@ export function Resources() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white py-16">
+      <section className="bg-gradient-to-r from-neutral-10 to-neutral-9 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="h1 text-white mb-4">Resource Center</h1>
-          <p className="text-blue-100 max-w-2xl">
+          <p className="text-neutral-1 max-w-2xl">
             Download product catalogs, technical documentation, case studies, and training materials. 
             All resources are available free of charge.
           </p>
@@ -127,17 +127,17 @@ export function Resources() {
       <div className="container mx-auto px-4 py-16">
         {resources.map((category, catIndex) => (
           <div key={catIndex} className="mb-16 last:mb-0">
-            <h2 className="h2 text-[#1e3a8a] mb-8">{category.category}</h2>
+            <h2 className="h2 text-neutral-10 mb-8">{category.category}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {category.items.map((item, itemIndex) => (
                 <Card key={itemIndex} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-[#FF5757]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-6 h-6 text-[#FF5757]" />
+                      <div className="w-12 h-12 bg-primary-5/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-6 h-6 text-primary-5" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="h4 text-[#1e3a8a] mb-2">{item.title}</h3>
+                        <h3 className="h4 text-neutral-10 mb-2">{item.title}</h3>
                         <p className="text-sm text-gray-600 mb-3">{item.description}</p>
                         <div className="flex items-center justify-between">
                           <div className="text-xs text-gray-500">
@@ -161,14 +161,14 @@ export function Resources() {
       {/* CTA */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <Card className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white">
+          <Card className="bg-gradient-to-r from-neutral-10 to-neutral-9 text-white">
             <CardContent className="p-12 text-center">
               <h2 className="h2 text-white mb-4">Need Custom Documentation?</h2>
-              <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-neutral-1 mb-8 max-w-2xl mx-auto">
                 Our technical team can provide customized specifications, drawings, 
                 and documentation tailored to your specific project requirements.
               </p>
-              <Button size="lg" className="bg-[#FF5757] hover:bg-[#E04848]">
+              <Button size="lg" className="bg-primary-5 hover:bg-primary-6">
                 Request Custom Documentation
               </Button>
             </CardContent>

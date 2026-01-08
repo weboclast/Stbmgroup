@@ -1,4 +1,5 @@
 import { Hero } from "../components/Hero";
+import SpecializedSolutions from "../components/SpecializedSolutions";
 import { OurSolutions } from "../components/OurSolutions";
 import { Industries } from "../components/Industries";
 import { WhySTBM } from "../components/WhySTBM";
@@ -14,6 +15,7 @@ export function Home() {
   return (
     <>
       <Hero />
+      <SpecializedSolutions />
       <OurSolutions />
       <Industries />
       <WhySTBM />

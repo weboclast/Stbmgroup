@@ -102,10 +102,10 @@ export function Projects() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white py-16">
+      <section className="bg-gradient-to-r from-neutral-10 to-neutral-9 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="h1 text-white mb-4">Our Projects</h1>
-          <p className="text-blue-100 max-w-2xl">
+          <p className="text-neutral-1 max-w-2xl">
             Proven track record of 100+ successful installations across the UAE. 
             From single equipment to complete turnkey facilities.
           </p>
@@ -117,19 +117,19 @@ export function Projects() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-[#1e3a8a] mb-2">100+</div>
+              <div className="text-neutral-10 mb-2">100+</div>
               <div className="text-gray-600">Projects Completed</div>
             </div>
             <div>
-              <div className="text-[#1e3a8a] mb-2">27+</div>
+              <div className="text-neutral-10 mb-2">27+</div>
               <div className="text-gray-600">Years Experience</div>
             </div>
             <div>
-              <div className="text-[#1e3a8a] mb-2">50+</div>
+              <div className="text-neutral-10 mb-2">50+</div>
               <div className="text-gray-600">Active Clients</div>
             </div>
             <div>
-              <div className="text-[#1e3a8a] mb-2">100%</div>
+              <div className="text-neutral-10 mb-2">100%</div>
               <div className="text-gray-600">Client Satisfaction</div>
             </div>
           </div>
@@ -151,13 +151,13 @@ export function Projects() {
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <Badge variant="secondary" className="bg-[#FF5757]/10 text-[#FF5757]">
+                    <Badge variant="secondary" className="bg-primary-4/10 text-primary-5">
                       {project.category}
                     </Badge>
                     <Badge variant="outline">{project.scope}</Badge>
                   </div>
                   
-                  <h3 className="h4 text-[#1e3a8a] mb-3">{project.name}</h3>
+                  <h3 className="h4 text-neutral-10 mb-3">{project.name}</h3>
                   
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
                     <div className="flex items-center gap-1">
@@ -173,11 +173,11 @@ export function Projects() {
                   <p className="text-gray-600 text-sm mb-4">{project.description}</p>
                   
                   <div className="mb-4">
-                    <div className="text-sm text-[#1e3a8a] mb-2">Key Results:</div>
+                    <div className="text-sm text-neutral-10 mb-2">Key Results:</div>
                     <ul className="space-y-1">
                       {project.results.map((result, index) => (
                         <li key={index} className="text-sm text-gray-600 flex items-start gap-2">
-                          <span className="text-[#FF5757] mt-1">•</span>
+                          <span className="text-primary-5 mt-1">•</span>
                           {result}
                         </li>
                       ))}
@@ -193,12 +193,12 @@ export function Projects() {
       {/* CTA */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="h2 text-[#1e3a8a] mb-4">Ready to Start Your Project?</h2>
+          <h2 className="h2 text-neutral-10 mb-4">Ready to Start Your Project?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Let's discuss your food processing requirements and create a customized solution for your facility.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-[#FF5757] hover:bg-[#E04848] gap-2" asChild>
+            <Button size="lg" className="bg-primary-5 hover:bg-primary-6 gap-2" asChild>
               <Link to="/enquiry">
                 <Building2 className="w-5 h-5" />
                 Start Your Project

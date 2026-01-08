@@ -8,6 +8,49 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
+
+  /* Design System Color Tokens */
+  /* Primary Colors (Red/Pink) */
+  --primary-0: #ffffff;
+  --primary-1: #ffe1de;
+  --primary-2: #ffc7c3;
+  --primary-3: #ff9c95;
+  --primary-4: #ff5757;
+  --primary-5: #fa002d;
+  --primary-6: #e7000f;
+  --primary-7: #c2000a;
+  --primary-8: #a0000f;
+  --primary-9: #840114;
+  --primary-10: #480006;
+
+  /* Secondary Colors (Green) */
+  --secondary-0: #ffffff;
+  --secondary-1: #d5ffe9;
+  --secondary-2: #acffd4;
+  --secondary-3: #57ffb7;
+  --secondary-4: #00ec90;
+  --secondary-5: #00d479;
+  --secondary-6: #00af62;
+  --secondary-7: #008a4e;
+  --secondary-8: #006d3f;
+  --secondary-9: #005936;
+  --secondary-10: #00321c;
+
+  /* Neutral Colors (Gray/Black) */
+  --neutral-0: #ffffff;
+  --neutral-1: #f3f5f7;
+  --neutral-2: #e4e5e7;
+  --neutral-3: #d3d4d6;
+  --neutral-4: #9fa1a3;
+  --neutral-5: #727375;
+  --neutral-6: #515254;
+  --neutral-7: #3f4041;
+  --neutral-8: #252628;
+  --neutral-9: #161718;
+  --neutral-10: #090a0b;
+
+  /* Border Radius */
+  --radius: 0.5rem;
   /**
    * Base typography.
    * Keep element-level rules minimal — heading sizes are provided
@@ -83,6 +126,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -311,5 +356,154 @@ html {
     font-size: 0.75rem;
     font-weight: 500;
     color: #16a34a;
+
+  }
+
+  /* Small compatibility utilities: add missing 12-column grid and col-span helpers
+     These mirror the Tailwind utilities that weren't present in the compiled CSS
+     and are only the subset required by the StyleGuide examples. */
+  @layer utilities {
+    /* Design System Color Utilities - Primary */
+    .text-primary-0 { color: var(--primary-0); }
+    .text-primary-1 { color: var(--primary-1); }
+    .text-primary-2 { color: var(--primary-2); }
+    .text-primary-3 { color: var(--primary-3); }
+    .text-primary-4 { color: var(--primary-4); }
+    .text-primary-5 { color: var(--primary-5); }
+    .text-primary-6 { color: var(--primary-6); }
+    .text-primary-7 { color: var(--primary-7); }
+    .text-primary-8 { color: var(--primary-8); }
+    .text-primary-9 { color: var(--primary-9); }
+    .text-primary-10 { color: var(--primary-10); }
+
+    .bg-primary-0 { background-color: var(--primary-0); }
+    .bg-primary-1 { background-color: var(--primary-1); }
+    .bg-primary-2 { background-color: var(--primary-2); }
+    .bg-primary-3 { background-color: var(--primary-3); }
+    .bg-primary-4 { background-color: var(--primary-4); }
+    .bg-primary-5 { background-color: var(--primary-5); }
+    .bg-primary-6 { background-color: var(--primary-6); }
+    .bg-primary-7 { background-color: var(--primary-7); }
+    .bg-primary-8 { background-color: var(--primary-8); }
+    .bg-primary-9 { background-color: var(--primary-9); }
+    .bg-primary-10 { background-color: var(--primary-10); }
+
+    .border-primary-0 { border-color: var(--primary-0); }
+    .border-primary-1 { border-color: var(--primary-1); }
+    .border-primary-2 { border-color: var(--primary-2); }
+    .border-primary-3 { border-color: var(--primary-3); }
+    .border-primary-4 { border-color: var(--primary-4); }
+    .border-primary-5 { border-color: var(--primary-5); }
+    .border-primary-6 { border-color: var(--primary-6); }
+    .border-primary-7 { border-color: var(--primary-7); }
+    .border-primary-8 { border-color: var(--primary-8); }
+    .border-primary-9 { border-color: var(--primary-9); }
+    .border-primary-10 { border-color: var(--primary-10); }
+
+    /* Design System Color Utilities - Secondary */
+    .text-secondary-0 { color: var(--secondary-0); }
+    .text-secondary-1 { color: var(--secondary-1); }
+    .text-secondary-2 { color: var(--secondary-2); }
+    .text-secondary-3 { color: var(--secondary-3); }
+    .text-secondary-4 { color: var(--secondary-4); }
+    .text-secondary-5 { color: var(--secondary-5); }
+    .text-secondary-6 { color: var(--secondary-6); }
+    .text-secondary-7 { color: var(--secondary-7); }
+    .text-secondary-8 { color: var(--secondary-8); }
+    .text-secondary-9 { color: var(--secondary-9); }
+    .text-secondary-10 { color: var(--secondary-10); }
+
+    .bg-secondary-0 { background-color: var(--secondary-0); }
+    .bg-secondary-1 { background-color: var(--secondary-1); }
+    .bg-secondary-2 { background-color: var(--secondary-2); }
+    .bg-secondary-3 { background-color: var(--secondary-3); }
+    .bg-secondary-4 { background-color: var(--secondary-4); }
+    .bg-secondary-5 { background-color: var(--secondary-5); }
+    .bg-secondary-6 { background-color: var(--secondary-6); }
+    .bg-secondary-7 { background-color: var(--secondary-7); }
+    .bg-secondary-8 { background-color: var(--secondary-8); }
+    .bg-secondary-9 { background-color: var(--secondary-9); }
+    .bg-secondary-10 { background-color: var(--secondary-10); }
+
+    .border-secondary-0 { border-color: var(--secondary-0); }
+    .border-secondary-1 { border-color: var(--secondary-1); }
+    .border-secondary-2 { border-color: var(--secondary-2); }
+    .border-secondary-3 { border-color: var(--secondary-3); }
+    .border-secondary-4 { border-color: var(--secondary-4); }
+    .border-secondary-5 { border-color: var(--secondary-5); }
+    .border-secondary-6 { border-color: var(--secondary-6); }
+    .border-secondary-7 { border-color: var(--secondary-7); }
+    .border-secondary-8 { border-color: var(--secondary-8); }
+    .border-secondary-9 { border-color: var(--secondary-9); }
+    .border-secondary-10 { border-color: var(--secondary-10); }
+
+    /* Design System Color Utilities - Neutral */
+    .text-neutral-0 { color: var(--neutral-0); }
+    .text-neutral-1 { color: var(--neutral-1); }
+    .text-neutral-2 { color: var(--neutral-2); }
+    .text-neutral-3 { color: var(--neutral-3); }
+    .text-neutral-4 { color: var(--neutral-4); }
+    .text-neutral-5 { color: var(--neutral-5); }
+    .text-neutral-6 { color: var(--neutral-6); }
+    .text-neutral-7 { color: var(--neutral-7); }
+    .text-neutral-8 { color: var(--neutral-8); }
+    .text-neutral-9 { color: var(--neutral-9); }
+    .text-neutral-10 { color: var(--neutral-10); }
+
+    .bg-neutral-0 { background-color: var(--neutral-0); }
+    .bg-neutral-1 { background-color: var(--neutral-1); }
+    .bg-neutral-2 { background-color: var(--neutral-2); }
+    .bg-neutral-3 { background-color: var(--neutral-3); }
+    .bg-neutral-4 { background-color: var(--neutral-4); }
+    .bg-neutral-5 { background-color: var(--neutral-5); }
+    .bg-neutral-6 { background-color: var(--neutral-6); }
+    .bg-neutral-7 { background-color: var(--neutral-7); }
+    .bg-neutral-8 { background-color: var(--neutral-8); }
+    .bg-neutral-9 { background-color: var(--neutral-9); }
+    .bg-neutral-10 { background-color: var(--neutral-10); }
+
+    .border-neutral-0 { border-color: var(--neutral-0); }
+    .border-neutral-1 { border-color: var(--neutral-1); }
+    .border-neutral-2 { border-color: var(--neutral-2); }
+    .border-neutral-3 { border-color: var(--neutral-3); }
+    .border-neutral-4 { border-color: var(--neutral-4); }
+    .border-neutral-5 { border-color: var(--neutral-5); }
+    .border-neutral-6 { border-color: var(--neutral-6); }
+    .border-neutral-7 { border-color: var(--neutral-7); }
+    .border-neutral-8 { border-color: var(--neutral-8); }
+    .border-neutral-9 { border-color: var(--neutral-9); }
+    .border-neutral-10 { border-color: var(--neutral-10); }
+
+    .grid-cols-12 {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    .col-span-1 { grid-column: span 1 / span 1; }
+    .col-span-2 { grid-column: span 2 / span 2; }
+    .col-span-3 { grid-column: span 3 / span 3; }
+    .col-span-4 { grid-column: span 4 / span 4; }
+    .col-span-6 { grid-column: span 6 / span 6; }
+    .col-span-8 { grid-column: span 8 / span 8; }
+    .col-span-9 { grid-column: span 9 / span 9; }
+    .col-span-12 { grid-column: span 12 / span 12; }
+
+    @media (width >= 40rem) {
+      .sm\:col-span-1 { grid-column: span 1 / span 1; }
+      .sm\:col-span-2 { grid-column: span 2 / span 2; }
+      .sm\:col-span-3 { grid-column: span 3 / span 3; }
+      .sm\:col-span-4 { grid-column: span 4 / span 4; }
+      .sm\:col-span-6 { grid-column: span 6 / span 6; }
+      .sm\:col-span-12 { grid-column: span 12 / span 12; }
+    }
+
+    @media (width >= 48rem) {
+      .md\:col-span-1 { grid-column: span 1 / span 1; }
+      .md\:col-span-2 { grid-column: span 2 / span 2; }
+      .md\:col-span-3 { grid-column: span 3 / span 3; }
+      .md\:col-span-4 { grid-column: span 4 / span 4; }
+      .md\:col-span-6 { grid-column: span 6 / span 6; }
+      .md\:col-span-8 { grid-column: span 8 / span 8; }
+      .md\:col-span-12 { grid-column: span 12 / span 12; }
+    }
   }
 }

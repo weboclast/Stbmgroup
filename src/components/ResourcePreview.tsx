@@ -30,7 +30,7 @@ export function ResourcePreview() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="h2 text-[#1e3a8a] mb-4">Knowledge That Empowers</h2>
+          <h2 className="h2 text-neutral-10 mb-4">Knowledge That Empowers</h2>
           <p className="text-gray-600">Featured Resources</p>
         </div>
 
@@ -41,11 +41,11 @@ export function ResourcePreview() {
               to="/resources"
               className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100 group"
             >
-              <div className="w-12 h-12 bg-[#1e3a8a]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#1e3a8a]/20 transition-colors">
-                <resource.icon className="w-6 h-6 text-[#1e3a8a]" />
+              <div className="w-12 h-12 bg-neutral-10/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-10/20 transition-colors">
+                <resource.icon className="w-6 h-6 text-neutral-10" />
               </div>
-              <div className="text-xs text-[#FF5757] mb-2">{resource.type}</div>
-              <h3 className="h5 text-[#1e3a8a] group-hover:text-[#FF5757] transition-colors">{resource.title}</h3>
+              <div className="text-xs text-primary-5 mb-2">{resource.type}</div>
+              <h3 className="h5 text-neutral-10 group-hover:text-primary-5 transition-colors">{resource.title}</h3>
             </Link>
           ))}
         </div>
@@ -54,7 +54,7 @@ export function ResourcePreview() {
           <Button 
             size="lg" 
             variant="outline" 
-            className="border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white gap-2"
+            className="border-neutral-10 text-neutral-10 hover:bg-neutral-10 hover:text-white gap-2"
             asChild
           >
             <Link to="/resources">

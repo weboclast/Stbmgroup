@@ -55,12 +55,12 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            <Link 
+            {/* <Link 
               to="/" 
               className={`transition-colors ${isActive('/') ? 'text-[#1e3a8a]' : 'text-gray-700 hover:text-[#1e3a8a]'}`}
             >
               Home
-            </Link>
+            </Link> */}
             
             {/* Solutions with Mega Menu */}
             <div 
@@ -70,7 +70,7 @@ export function Header() {
             >
               <button
                 className={`flex items-center gap-1 transition-colors ${
-                  isActive('/solutions') ? 'text-[#1e3a8a]' : 'text-gray-700 hover:text-[#1e3a8a]'
+                  isActive('/solutions') ? 'text-neutral-10' : 'text-gray-700 hover:text-neutral-10'
                 }`}
               >
                 Solutions
@@ -84,13 +84,13 @@ export function Header() {
                     <div className="grid grid-cols-3 gap-8">
                       {megaMenuSolutions.map((column, idx) => (
                         <div key={idx}>
-                          <h3 className="h6 text-[#1e3a8a] mb-4">{column.title}</h3>
+                          <h3 className="text-foreground font-semibold mb-4 text-xs uppercase tracking-wider">{column.title}</h3>
                           <ul className="space-y-3">
                             {column.items.map((item, itemIdx) => (
                               <li key={itemIdx}>
                                 <Link
                                   to={item.link}
-                                  className="text-sm text-gray-600 hover:text-[#FF5757] transition-colors block"
+                                  className="text-sm text-gray-600 hover:text-primary-5 transition-colors block"
                                 >
                                   {item.name}
                                 </Link>
@@ -107,26 +107,26 @@ export function Header() {
 
             <Link 
               to="/products" 
-              className={`transition-colors ${isActive('/products') ? 'text-[#1e3a8a]' : 'text-gray-700 hover:text-[#1e3a8a]'}`}
+              className={`transition-colors ${isActive('/products') ? 'text-neutral-10' : 'text-gray-700 hover:text-neutral-10'}`}
             >
               Equipments
             </Link>
 
             <Link 
               to="/projects" 
-              className={`transition-colors ${isActive('/projects') ? 'text-[#1e3a8a]' : 'text-gray-700 hover:text-[#1e3a8a]'}`}
+              className={`transition-colors ${isActive('/projects') ? 'text-neutral-10' : 'text-gray-700 hover:text-neutral-10'}`}
             >
               Projects
             </Link>
             <Link 
               to="/resources" 
-              className={`transition-colors ${isActive('/resources') ? 'text-[#1e3a8a]' : 'text-gray-700 hover:text-[#1e3a8a]'}`}
+              className={`transition-colors ${isActive('/resources') ? 'text-neutral-10' : 'text-gray-700 hover:text-neutral-10'}`}
             >
               Resources
             </Link>
             <Link 
               to="/about" 
-              className={`transition-colors ${isActive('/about') ? 'text-[#1e3a8a]' : 'text-gray-700 hover:text-[#1e3a8a]'}`}
+              className={`transition-colors ${isActive('/about') ? 'text-neutral-10' : 'text-gray-700 hover:text-neutral-10'}`}
             >
               About
             </Link>
@@ -139,7 +139,7 @@ export function Header() {
               <span>+971 XX XXX XXXX</span>
             </div>
             <EnquiryBasketButton />
-            <Button className="bg-[#FF5757] hover:bg-[#E04848]" asChild>
+            <Button className="bg-neutral-10 hover:bg-primary-4" asChild>
               <Link to="/enquiry">Request Quote</Link>
             </Button>
           </div>
@@ -163,42 +163,42 @@ export function Header() {
             <nav className="flex flex-col gap-4">
               <Link 
                 to="/" 
-                className="text-gray-700 hover:text-[#1e3a8a] transition-colors"
+                className="text-gray-700 hover:text-neutral-10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 to="/products" 
-                className="text-gray-700 hover:text-[#1e3a8a] transition-colors"
+                className="text-gray-700 hover:text-neutral-10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Solutions
               </Link>
               <Link 
                 to="/projects" 
-                className="text-gray-700 hover:text-[#1e3a8a] transition-colors"
+                className="text-gray-700 hover:text-neutral-10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Projects
               </Link>
               <Link 
                 to="/resources" 
-                className="text-gray-700 hover:text-[#1e3a8a] transition-colors"
+                className="text-gray-700 hover:text-neutral-10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Resources
               </Link>
               <Link 
                 to="/about" 
-                className="text-gray-700 hover:text-[#1e3a8a] transition-colors"
+                className="text-gray-700 hover:text-neutral-10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </Link>
               <div className="flex gap-2 mt-2">
                 <EnquiryBasketButton />
-                <Button className="bg-[#FF5757] hover:bg-[#E04848] flex-1" asChild>
+                <Button className="bg-primary-4 hover:bg-primary-5 flex-1" asChild>
                   <Link to="/enquiry" onClick={() => setMobileMenuOpen(false)}>Request Quote</Link>
                 </Button>
               </div>

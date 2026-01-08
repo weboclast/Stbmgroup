@@ -15,7 +15,7 @@ export function ProductDetail() {
   if (!product) {
     return (
       <div className="container mx-auto px-4 py-20 text-center">
-      <h2 className="h2 text-[#1e3a8a] mb-4">Product Not Found</h2>
+      <h2 className="h2 text-neutral-10 mb-4">Product Not Found</h2>
         <Button asChild>
           <Link to="/products">Back to Products</Link>
         </Button>
@@ -38,11 +38,11 @@ export function ProductDetail() {
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Link to="/" className="hover:text-[#1e3a8a]">Home</Link>
+            <Link to="/" className="hover:text-neutral-10">Home</Link>
             <span>/</span>
-            <Link to="/products" className="hover:text-[#1e3a8a]">Equipment</Link>
+            <Link to="/products" className="hover:text-neutral-10">Equipment</Link>
             <span>/</span>
-            <span className="text-[#1e3a8a]">{product.model}</span>
+            <span className="text-neutral-10">{product.model}</span>
           </div>
         </div>
       </div>
@@ -81,18 +81,18 @@ export function ProductDetail() {
 
           {/* Product Info */}
           <div>
-            <div className="text-sm text-[#FF5757] mb-2">{product.category}</div>
-            <h1 className="h1 text-[#1e3a8a] mb-2">{product.name}</h1>
+            <div className="text-sm text-primary-5 mb-2">{product.category}</div>
+            <h1 className="h1 text-neutral-10 mb-2">{product.name}</h1>
             <div className="text-xl text-gray-700 mb-6">Model: {product.model}</div>
             
             <p className="text-gray-600 mb-8 text-lg">{product.description}</p>
 
             <div className="bg-blue-50 border border-blue-100 rounded-lg p-6 mb-8">
-              <h3 className="text-[#1e3a8a] mb-4">Key Features & Specifications</h3>
+              <h3 className="text-neutral-10 mb-4">Key Features & Specifications</h3>
               <ul className="space-y-3">
                 {product.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-primary-5 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -102,7 +102,7 @@ export function ProductDetail() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className={`flex-1 gap-2 ${isInBasket(product.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-[#FF5757] hover:bg-[#E04848]'}`}
+                className={`flex-1 gap-2 ${isInBasket(product.id) ? 'bg-green-600 hover:bg-green-700' : 'bg-primary-5 hover:bg-primary-6'}`}
                 onClick={handleAddToBasket}
                 disabled={isInBasket(product.id)}
               >
@@ -122,7 +122,7 @@ export function ProductDetail() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="flex-1 border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white"
+                  className="flex-1 border-neutral-10 text-neutral-10 hover:bg-neutral-10 hover:text-white"
                   asChild
                 >
                   <Link to="/enquiry">View Enquiry Basket</Link>
@@ -131,7 +131,7 @@ export function ProductDetail() {
             </div>
 
             <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-              <h4 className="text-[#1e3a8a] mb-3">What's Included</h4>
+              <h4 className="text-neutral-10 mb-3">What's Included</h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>✓ Professional installation services</li>
                 <li>✓ Comprehensive operator training</li>
@@ -146,7 +146,7 @@ export function ProductDetail() {
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <div>
-            <h2 className="h2 text-[#1e3a8a] mb-8">Related Equipment</h2>
+            <h2 className="h2 text-neutral-10 mb-8">Related Equipment</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedProducts.map((relatedProduct) => (
                 <Card key={relatedProduct.id} className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -160,9 +160,9 @@ export function ProductDetail() {
                     </div>
                   </Link>
                   <CardContent className="p-6">
-                    <div className="text-sm text-[#FF5757] mb-2">{relatedProduct.category}</div>
+                    <div className="text-sm text-primary-5 mb-2">{relatedProduct.category}</div>
                     <Link to={`/products/${relatedProduct.id}`}>
-                            <h3 className="h3 text-[#1e3a8a] mb-2 hover:text-[#FF5757] transition-colors">
+                            <h3 className="h3 text-neutral-10 mb-2 hover:text-primary-5 transition-colors">
                         {relatedProduct.name}
                       </h3>
                     </Link>
@@ -170,7 +170,7 @@ export function ProductDetail() {
                     <Button
                       size="sm"
                       variant="outline"
-                      className="w-full border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white"
+                      className="w-full border-neutral-10 text-neutral-10 hover:bg-neutral-10 hover:text-white"
                       asChild
                     >
                       <Link to={`/products/${relatedProduct.id}`}>View Details</Link>

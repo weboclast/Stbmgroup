@@ -91,10 +91,10 @@ export function Enquiry() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white py-12">
+      <section className="bg-gradient-to-r from-neutral-10 to-neutral-9 text-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="h1 text-white mb-4">Enquiry Form</h1>
-          <p className="text-blue-100">
+          <p className="text-neutral-1">
             Complete the form below and our team will respond within 24 hours
           </p>
         </div>
@@ -106,10 +106,10 @@ export function Enquiry() {
           <div className="flex items-center justify-center gap-4">
             {[1, 2, 3].map((stepNum) => (
               <div key={stepNum} className="flex items-center">
-                <div className={`flex items-center gap-3 ${stepNum <= step ? 'text-[#1e3a8a]' : 'text-gray-400'}`}>
+                <div className={`flex items-center gap-3 ${stepNum <= step ? 'text-neutral-10' : 'text-gray-400'}`}>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
                     stepNum < step ? 'bg-green-600 text-white' :
-                    stepNum === step ? 'bg-[#1e3a8a] text-white' :
+                    stepNum === step ? 'bg-neutral-10 text-white' :
                     'bg-gray-200 text-gray-600'
                   }`}>
                     {stepNum < step ? <CheckCircle2 className="w-5 h-5" /> : stepNum}
@@ -132,7 +132,7 @@ export function Enquiry() {
           {/* Step 1: Requirements */}
           {step === 1 && (
             <div>
-              <h2 className="h2 text-[#1e3a8a] mb-6">Your Requirements</h2>
+              <h2 className="h2 text-neutral-10 mb-6">Your Requirements</h2>
               
               {items.length === 0 ? (
                 <Card className="p-12 text-center">
@@ -156,9 +156,9 @@ export function Enquiry() {
                               />
                             </div>
                             <div className="flex-1">
-                              <h3 className="h3 text-[#1e3a8a] mb-1">{item.name}</h3>
+                              <h3 className="h3 text-neutral-10 mb-1">{item.name}</h3>
                               <div className="text-sm text-gray-500 mb-2">Model: {item.model}</div>
-                              <div className="text-sm text-[#FF5757]">{item.category}</div>
+                              <div className="text-sm text-primary-5">{item.category}</div>
                             </div>
                             <Button
                               variant="ghost"
@@ -209,7 +209,7 @@ export function Enquiry() {
                 <Button
                   size="lg"
                   onClick={handleNext}
-                  className="bg-[#1e3a8a] hover:bg-[#172554] gap-2"
+                  className="bg-neutral-10 hover:bg-neutral-9 gap-2"
                   disabled={items.length === 0}
                 >
                   Continue to Information
@@ -222,7 +222,7 @@ export function Enquiry() {
           {/* Step 2: Information */}
           {step === 2 && (
             <div>
-              <h2 className="text-[#1e3a8a] mb-6">Your Information</h2>
+              <h2 className="text-neutral-10 mb-6">Your Information</h2>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
@@ -334,7 +334,7 @@ export function Enquiry() {
                 <Button
                   size="lg"
                   onClick={handleNext}
-                  className="bg-[#1e3a8a] hover:bg-[#172554] gap-2"
+                  className="bg-neutral-10 hover:bg-neutral-9 gap-2"
                 >
                   Continue to Review
                   <ArrowRight className="w-5 h-5" />
@@ -346,11 +346,11 @@ export function Enquiry() {
           {/* Step 3: Confirmation */}
           {step === 3 && (
             <div>
-              <h2 className="text-[#1e3a8a] mb-6">Review & Submit</h2>
+              <h2 className="text-neutral-10 mb-6">Review & Submit</h2>
               
               <Card className="mb-6">
                 <CardContent className="p-6">
-                  <h3 className="text-[#1e3a8a] mb-4">Selected Equipment</h3>
+                  <h3 className="text-neutral-10 mb-4">Selected Equipment</h3>
                   <div className="space-y-3">
                     {items.map((item) => (
                       <div key={item.id} className="flex items-center gap-3 pb-3 border-b last:border-0">
@@ -362,7 +362,7 @@ export function Enquiry() {
                           />
                         </div>
                         <div>
-                          <div className="text-[#1e3a8a]">{item.name}</div>
+                        <div className="text-neutral-10">{item.name}</div>
                           <div className="text-sm text-gray-500">Model: {item.model}</div>
                         </div>
                       </div>
@@ -373,7 +373,7 @@ export function Enquiry() {
 
               <Card className="mb-6">
                 <CardContent className="p-6">
-                  <h3 className="text-[#1e3a8a] mb-4">Contact Information</h3>
+                  <h3 className="text-neutral-10 mb-4">Contact Information</h3>
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
                     <div>
                       <div className="text-gray-500">Name</div>
@@ -437,7 +437,7 @@ export function Enquiry() {
                 <Button
                   size="lg"
                   onClick={handleSubmit}
-                  className="bg-[#FF5757] hover:bg-[#E04848] gap-2"
+                  className="bg-primary-5 hover:bg-primary-6 gap-2"
                   disabled={!formData.acceptPrivacy}
                 >
                   <Send className="w-5 h-5" />

@@ -61,7 +61,7 @@ export function Testimonial() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="h2 text-[#1e3a8a] mb-4">What Our Clients Say</h2>
+            <h2 className="h2 text-neutral-10 mb-4">What Our Clients Say</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Real results from industry leaders who've transformed their operations with STBM
             </p>
@@ -89,7 +89,7 @@ export function Testimonial() {
 
                   {/* Name & Title */}
                   <div className="mb-8">
-                    <h3 className="h4 text-[#1e3a8a] mb-1">{current.name}</h3>
+                    <h3 className="h4 text-neutral-10 mb-1">{current.name}</h3>
                     <p className="text-sm text-gray-600">{current.title}</p>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export function Testimonial() {
                   <div className="grid grid-cols-2 gap-6">
                     {current.metrics.map((metric, idx) => (
                       <div key={idx}>
-                        <div className="text-2xl md:text-3xl font-bold text-[#FF5757] mb-1">
+                        <div className="text-2xl md:text-3xl font-bold text-primary-5 mb-1">
                           {metric.value}
                         </div>
                         <p className="text-sm text-gray-600">{metric.label}</p>
@@ -111,7 +111,7 @@ export function Testimonial() {
                 {/* CTA */}
                 <Button 
                   asChild
-                  className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2 w-fit"
+                  className="bg-primary-5 hover:bg-primary-6 text-white gap-2 w-fit"
                 >
                   <Link to={`/projects#${current.slug}`}>
                     See {current.name.split(" ")[0]}'s story
@@ -131,7 +131,7 @@ export function Testimonial() {
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
                   className={`w-2 h-2 rounded-full transition-all ${
-                    idx === currentIndex ? 'bg-[#FF5757] w-8' : 'bg-gray-300'
+                    idx === currentIndex ? 'bg-primary-5 w-8' : 'bg-gray-300'
                   }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
                 />
@@ -142,14 +142,14 @@ export function Testimonial() {
             <div className="flex gap-3">
               <button
                 onClick={handlePrev}
-                className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-[#FF5757] hover:text-[#FF5757] transition-colors"
+                className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-primary-5 hover:text-primary-5 transition-colors"
                 aria-label="Previous testimonial"
               >
                 ←
               </button>
               <button
                 onClick={handleNext}
-                className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-[#FF5757] hover:text-[#FF5757] transition-colors"
+                className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-primary-5 hover:text-primary-5 transition-colors"
                 aria-label="Next testimonial"
               >
                 →
