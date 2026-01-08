@@ -1,27 +1,165 @@
-import { Quote } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { Button } from "./ui/button";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Link } from "react-router-dom";
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Angelina Vasquez",
+    title: "Marketing Manager of KM Hypermarket",
+    quote: "STBM is the secret to our operations success. It makes day to day oops so easy, and our customers love using our new efficient services.",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    metrics: [
+      { value: "+$550,000", label: "Online sales" },
+      { value: "+377%", label: "Growth" }
+    ],
+    slug: "angelina-vasquez-km-hypermarket"
+  },
+  {
+    id: 2,
+    name: "Ahmed Al Rashid",
+    title: "CEO, Gulf Food Industries",
+    quote: "STBM didn't just supply equipment - they solved our capacity problem. Their team analyzed our bottlenecks, redesigned our workflow, and implemented solutions that doubled our output without doubling our footprint.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    metrics: [
+      { value: "2x", label: "Output increase" },
+      { value: "0%", label: "Footprint change" }
+    ],
+    slug: "ahmed-al-rashid-gulf-food"
+  },
+  {
+    id: 3,
+    name: "Fatima Al Mansouri",
+    title: "Operations Director, Al Reef Dairy",
+    quote: "The professionalism and attention to detail shown by STBM transformed our facility. From initial consultation to final commissioning, every step was executed flawlessly. Our production has never been smoother.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    metrics: [
+      { value: "+250%", label: "Efficiency gain" },
+      { value: "-40%", label: "Downtime reduction" }
+    ],
+    slug: "fatima-al-mansouri-al-reef"
+  }
+];
 
 export function Testimonial() {
-  return (
-    <section className="py-20 bg-gradient-to-br from-[#1e3a8a] to-[#172554] text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
-        }}></div>
-      </div>
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const current = testimonials[currentIndex];
 
-      <div className="container mx-auto px-4 relative">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="w-16 h-16 bg-[#FF5757] rounded-full flex items-center justify-center mx-auto mb-8">
-            <Quote className="w-8 h-8 text-white" />
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="h2 text-[#1e3a8a] mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Real results from industry leaders who've transformed their operations with STBM
+            </p>
           </div>
-          
-          <blockquote className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
-            "STBM didn't just supply equipment - they solved our capacity problem. Their team analyzed our bottlenecks, redesigned our workflow, and implemented solutions that doubled our output without doubling our footprint."
-          </blockquote>
-          
-          <div>
-            <div className="text-white mb-1">Ahmed Al Rashid</div>
-            <div className="text-blue-200 text-sm">CEO, Gulf Food Industries</div>
+
+          {/* Testimonial Card */}
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Image */}
+              <div className="h-96 md:h-full min-h-96 bg-gray-100 overflow-hidden">
+                <ImageWithFallback
+                  src={current.image}
+                  alt={current.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-8 md:p-12 flex flex-col justify-between">
+                {/* Quote */}
+                <div className="mb-8">
+                  <p className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium mb-6">
+                    "{current.quote}"
+                  </p>
+
+                  {/* Name & Title */}
+                  <div className="mb-8">
+                    <h3 className="h4 text-[#1e3a8a] mb-1">{current.name}</h3>
+                    <p className="text-sm text-gray-600">{current.title}</p>
+                  </div>
+                </div>
+
+                {/* Metrics */}
+                <div className="mb-8">
+                  <div className="grid grid-cols-2 gap-6">
+                    {current.metrics.map((metric, idx) => (
+                      <div key={idx}>
+                        <div className="text-2xl md:text-3xl font-bold text-[#FF5757] mb-1">
+                          {metric.value}
+                        </div>
+                        <p className="text-sm text-gray-600">{metric.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <Button 
+                  asChild
+                  className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2 w-fit"
+                >
+                  <Link to={`/projects#${current.slug}`}>
+                    See {current.name.split(" ")[0]}'s story
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div className="flex items-center justify-between mt-8">
+            {/* Dots */}
+            <div className="flex gap-2">
+              {testimonials.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentIndex(idx)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    idx === currentIndex ? 'bg-[#FF5757] w-8' : 'bg-gray-300'
+                  }`}
+                  aria-label={`Go to testimonial ${idx + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Arrow Buttons */}
+            <div className="flex gap-3">
+              <button
+                onClick={handlePrev}
+                className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-[#FF5757] hover:text-[#FF5757] transition-colors"
+                aria-label="Previous testimonial"
+              >
+                ←
+              </button>
+              <button
+                onClick={handleNext}
+                className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-[#FF5757] hover:text-[#FF5757] transition-colors"
+                aria-label="Next testimonial"
+              >
+                →
+              </button>
+            </div>
+          </div>
+
+          {/* Counter */}
+          <div className="text-center mt-8 text-sm text-gray-600">
+            {currentIndex + 1} / {testimonials.length}
           </div>
         </div>
       </div>
