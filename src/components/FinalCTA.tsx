@@ -9,12 +9,12 @@ export function FinalCTA() {
         <div className="max-w-4xl mx-auto">
           {/* Main CTA Content */}
           <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Ready to build your facility?
+            </h2>
             <p className="text-gray-400 text-sm mb-4">
               Join the many successful food processing businesses that trust STBM for their equipment and facility needs. Let's discuss how we can help your operation thrive.
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Start Your Project
-            </h2>
             <Button
               size="lg"
               className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-6 text-base inline-flex items-center"
