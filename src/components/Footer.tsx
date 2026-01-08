@@ -62,68 +62,70 @@ export function Footer() {
         </div>
 
         {/* Main Grid - 5 Columns */}
-        <div className="grid grid-cols-5 gap-8 mb-12">
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Home</Link></li>
-              <li><Link to="/solutions/complete-facilities" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Complete Facilities</Link></li>
-              <li><Link to="/solutions/infrastructure-systems" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Infrastructure Systems</Link></li>
-              <li><Link to="/solutions/operations-support" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Operations & Support</Link></li>
-              <li><Link to="/products" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Equipments</Link></li>
-              <li><Link to="/projects" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Our Projects</Link></li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">Resources</h4>
-            <ul className="space-y-2">
-              <li><Link to="/resources" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Download Catalogs</Link></li>
-              <li><Link to="/resources" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Technical Docs</Link></li>
-              <li><Link to="/resources" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Case Studies</Link></li>
-              <li><a href="#" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Video Resources</a></li>
-            </ul>
-          </div>
-
-          {/* About */}
-          <div>
-            <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">About</h4>
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">About Us</Link></li>
-              <li><a href="#" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Career</a></li>
-              <li><a href="#" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Leadership</a></li>
-              <li><a href="#" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Video Resources</a></li>
-            </ul>
-          </div>
-
-          {/* Office Hours */}
-          <div>
-            <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">Office Hours</h4>
-            <div className="space-y-2">
-              <p className="text-gray-600 text-sm">Sunday - Thursday</p>
-              <p className="text-gray-600 text-sm">8:00 AM - 6:00 PM GST</p>
+        <div className="w-full">
+          <div className="grid grid-cols-5 gap-6 mb-12">
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link to="/" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Home</Link></li>
+                <li><Link to="/solutions/complete-facilities" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Complete Facilities</Link></li>
+                <li><Link to="/solutions/infrastructure-systems" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Infrastructure Systems</Link></li>
+                <li><Link to="/solutions/operations-support" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Operations & Support</Link></li>
+                <li><Link to="/products" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Equipments</Link></li>
+                <li><Link to="/projects" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Our Projects</Link></li>
+              </ul>
             </div>
-          </div>
 
-          {/* Support */}
-          <div>
-            <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">Support</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2">
-                <Phone className="w-4 h-4 flex-shrink-0 text-[#FF5757] mt-0.5" />
-                <span className="text-gray-600 text-sm">+971 XX XXX XXXX</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Mail className="w-4 h-4 flex-shrink-0 text-[#FF5757] mt-0.5" />
-                <span className="text-gray-600 text-sm">info@stbm.ae</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 flex-shrink-0 text-[#FF5757] mt-0.5" />
-                <span className="text-gray-600 text-sm">Al Mawrouth St - Al Danah - Zone 1, Abu Dhabi, UAE</span>
-              </li>
-            </ul>
+            {/* Resources */}
+            <div>
+              <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">Resources</h4>
+              <ul className="space-y-2">
+                <li><Link to="/resources" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Download Catalogs</Link></li>
+                <li><Link to="/resources" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Technical Docs</Link></li>
+                <li><Link to="/resources" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Case Studies</Link></li>
+                <li><a href="#" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Video Resources</a></li>
+              </ul>
+            </div>
+
+            {/* About */}
+            <div>
+              <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">About</h4>
+              <ul className="space-y-2">
+                <li><Link to="/about" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">About Us</Link></li>
+                <li><a href="#" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Career</a></li>
+                <li><a href="#" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Leadership</a></li>
+                <li><a href="#" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">Video Resources</a></li>
+              </ul>
+            </div>
+
+            {/* Office Hours */}
+            <div>
+              <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">Office Hours</h4>
+              <div className="space-y-2">
+                <p className="text-gray-600 text-sm">Sunday - Thursday</p>
+                <p className="text-gray-600 text-sm">8:00 AM - 6:00 PM GST</p>
+              </div>
+            </div>
+
+            {/* Support */}
+            <div>
+              <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">Support</h4>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <Phone className="w-4 h-4 flex-shrink-0 text-[#FF5757] mt-0.5" />
+                  <span className="text-gray-600 text-sm">+971 XX XXX XXXX</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Mail className="w-4 h-4 flex-shrink-0 text-[#FF5757] mt-0.5" />
+                  <span className="text-gray-600 text-sm">info@stbm.ae</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 flex-shrink-0 text-[#FF5757] mt-0.5" />
+                  <span className="text-gray-600 text-sm">Al Mawrouth St - Al Danah - Zone 1, Abu Dhabi, UAE</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
