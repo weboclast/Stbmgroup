@@ -151,7 +151,7 @@ export function Projects() {
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <Badge variant="secondary" className="bg-[#f97316]/10 text-[#f97316]">
+                    <Badge variant="secondary" className="bg-[#FF5757]/10 text-[#FF5757]">
                       {project.category}
                     </Badge>
                     <Badge variant="outline">{project.scope}</Badge>
@@ -177,7 +177,7 @@ export function Projects() {
                     <ul className="space-y-1">
                       {project.results.map((result, index) => (
                         <li key={index} className="text-sm text-gray-600 flex items-start gap-2">
-                          <span className="text-[#f97316] mt-1">•</span>
+                          <span className="text-[#FF5757] mt-1">•</span>
                           {result}
                         </li>
                       ))}
@@ -198,7 +198,7 @@ export function Projects() {
             Let's discuss your food processing requirements and create a customized solution for your facility.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-[#f97316] hover:bg-[#ea580c] gap-2" asChild>
+            <Button size="lg" className="bg-[#FF5757] hover:bg-[#E04848] gap-2" asChild>
               <Link to="/enquiry">
                 <Building2 className="w-5 h-5" />
                 Start Your Project

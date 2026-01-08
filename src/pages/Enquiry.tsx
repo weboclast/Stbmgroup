@@ -93,7 +93,7 @@ export function Enquiry() {
       {/* Header */}
       <section className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] text-white py-12">
         <div className="container mx-auto px-4">
-          <h1 className="text-white mb-4">Enquiry Form</h1>
+          <h1 className="h1 text-white mb-4">Enquiry Form</h1>
           <p className="text-blue-100">
             Complete the form below and our team will respond within 24 hours
           </p>
@@ -132,7 +132,7 @@ export function Enquiry() {
           {/* Step 1: Requirements */}
           {step === 1 && (
             <div>
-              <h2 className="text-[#1e3a8a] mb-6">Your Requirements</h2>
+              <h2 className="h2 text-[#1e3a8a] mb-6">Your Requirements</h2>
               
               {items.length === 0 ? (
                 <Card className="p-12 text-center">
@@ -156,7 +156,7 @@ export function Enquiry() {
                               />
                             </div>
                             <div className="flex-1">
-                              <h3 className="text-[#1e3a8a] mb-1">{item.name}</h3>
+                              <h3 className="h3 text-[#1e3a8a] mb-1">{item.name}</h3>
                               <div className="text-sm text-gray-500 mb-2">Model: {item.model}</div>
                               <div className="text-sm text-[#FF5757]">{item.category}</div>
                             </div>

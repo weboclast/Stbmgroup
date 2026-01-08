@@ -49,7 +49,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center" aria-label="STBM Home">
-            <img src={logo} alt="STBM Food Technology" className="h-10 w-auto" loading="lazy" />
+            <img src={logo} alt="STBM Food Technology" className="h-16 w-auto" loading="lazy" />
             <span className="sr-only">STBM Food Technology</span>
           </Link>
 
@@ -84,7 +84,7 @@ export function Header() {
                     <div className="grid grid-cols-3 gap-8">
                       {megaMenuSolutions.map((column, idx) => (
                         <div key={idx}>
-                          <h3 className="h4 text-[#1e3a8a] mb-4">{column.title}</h3>
+                          <h3 className="h6 text-[#1e3a8a] mb-4">{column.title}</h3>
                           <ul className="space-y-3">
                             {column.items.map((item, itemIdx) => (
                               <li key={itemIdx}>

@@ -61,11 +61,11 @@ export default function CompleteFacilities() {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5 mb-8">
-              <div className="w-2 h-2 bg-[#f97316] rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-[#FF5757] rounded-full animate-pulse"></div>
               <span className="text-sm">Tier 1 • Complete Facilities</span>
             </div>
 
-            <h1 className="text-white mb-6">
+            <h1 className="h1 text-white mb-6">
               Turnkey Facilities, Delivered Ready to Operate
             </h1>
             
@@ -80,7 +80,7 @@ export default function CompleteFacilities() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-[#1e3a8a] mb-4">
+            <h2 className="h2 text-[#1e3a8a] mb-4">
               Complete Facility Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -108,7 +108,7 @@ export default function CompleteFacilities() {
                   </p>
                   <Button 
                     asChild
-                    className="w-full bg-[#f97316] hover:bg-[#ea580c] text-white gap-2"
+                    className="w-full bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
                   >
                     <Link to={`/solutions/complete-facilities/${facility.slug}`}>
                       Learn More
@@ -127,7 +127,7 @@ export default function CompleteFacilities() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-[#1e3a8a] mb-4">
+              <h2 className="h2 text-[#1e3a8a] mb-4">
                 What "Complete" Really Means
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -139,10 +139,10 @@ export default function CompleteFacilities() {
               {components.map((component, index) => (
                 <div 
                   key={index}
-                  className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-[#f97316] transition-colors"
+                  className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-[#FF5757] transition-colors"
                 >
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#f97316] flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-6 h-6 text-[#FF5757] flex-shrink-0 mt-0.5" />
                     <span className="text-gray-800">{component}</span>
                   </div>
                 </div>
@@ -152,15 +152,15 @@ export default function CompleteFacilities() {
             <div className="mt-12 bg-[#1e3a8a] rounded-2xl p-8 md:p-12 text-white">
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="text-[#f97316] mb-2">One Partner</div>
+                  <div className="text-[#FF5757] mb-2">One Partner</div>
                   <p className="text-sm text-gray-300">Accountable from design to commissioning</p>
                 </div>
                 <div className="text-center md:border-l md:border-r border-white/20">
-                  <div className="text-[#f97316] mb-2">Integrated</div>
+                  <div className="text-[#FF5757] mb-2">Integrated</div>
                   <p className="text-sm text-gray-300">All systems designed to work together</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-[#f97316] mb-2">Ready to Operate</div>
+                  <div className="text-[#FF5757] mb-2">Ready to Operate</div>
                   <p className="text-sm text-gray-300">Commissioned and tested before handover</p>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function CompleteFacilities() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-[#1e3a8a] mb-6">
+            <h2 className="h2 text-[#1e3a8a] mb-6">
               Ready to Build Your Facility?
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -182,7 +182,7 @@ export default function CompleteFacilities() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-[#f97316] hover:bg-[#ea580c] text-white gap-2"
+                className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
                 asChild
               >
                 <Link to="/enquiry">

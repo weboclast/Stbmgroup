@@ -40,7 +40,7 @@ export function WhySTBM() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-              <div className="w-14 h-14 bg-[#f97316] rounded-lg flex items-center justify-center mb-4">
+              <div className="w-14 h-14 bg-[#FF5757] rounded-lg flex items-center justify-center mb-4">
                 <reason.icon className="w-7 h-7 text-white" />
               </div>
               <h3 className="h5 text-white mb-3">{reason.title}</h3>

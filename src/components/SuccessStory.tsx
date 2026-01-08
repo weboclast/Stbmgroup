@@ -9,7 +9,7 @@ export function SuccessStory() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-4">
-            <div className="inline-block bg-[#f97316]/10 text-[#f97316] px-4 py-2 rounded-full text-sm mb-4">
+            <div className="inline-block bg-[#FF5757]/10 text-[#FF5757] px-4 py-2 rounded-full text-sm mb-4">
               Recent Success Story
             </div>
           </div>
@@ -31,21 +31,21 @@ export function SuccessStory() {
                 
                 <div className="space-y-6">
                   <div>
-                    <div className="text-sm text-[#f97316] mb-2">Challenge</div>
+                    <div className="text-sm text-[#FF5757] mb-2">Challenge</div>
                     <p className="text-gray-600">
                       A major UAE food manufacturer needed to triple production capacity for Ramadan season.
                     </p>
                   </div>
                   
                   <div>
-                    <div className="text-sm text-[#f97316] mb-2">Our Solution</div>
+                    <div className="text-sm text-[#FF5757] mb-2">Our Solution</div>
                     <p className="text-gray-600">
                       Designed and installed a complete parallel production line including meat processing, packaging, and cold storage systems.
                     </p>
                   </div>
                   
                   <div>
-                    <div className="text-sm text-[#f97316] mb-2">Result</div>
+                    <div className="text-sm text-[#FF5757] mb-2">Result</div>
                     <div className="space-y-2">
                       <div className="flex items-start gap-2">
                         <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -62,7 +62,7 @@ export function SuccessStory() {
                 <div className="mt-8">
                   <Button 
                     variant="outline" 
-                    className="border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-white gap-2"
+                    className="border-[#FF5757] text-[#FF5757] hover:bg-[#FF5757] hover:text-white gap-2"
                     asChild
                   >
                     <Link to="/projects">

@@ -70,11 +70,11 @@ export default function OperationsSupport() {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5 mb-8">
-              <div className="w-2 h-2 bg-[#f97316] rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-[#FF5757] rounded-full animate-pulse"></div>
               <span className="text-sm">Tier 3 • Operations & Support</span>
             </div>
 
-            <h1 className="text-white mb-6">
+            <h1 className="h1 text-white mb-6">
               Facility Operations & Technical Support Services
             </h1>
             
@@ -89,7 +89,7 @@ export default function OperationsSupport() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-[#1e3a8a] mb-4">
+            <h2 className="h2 text-[#1e3a8a] mb-4">
               Support Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -117,7 +117,7 @@ export default function OperationsSupport() {
                   </p>
                   <Button 
                     asChild
-                    className="w-full bg-[#f97316] hover:bg-[#ea580c] text-white gap-2"
+                    className="w-full bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
                   >
                     <Link to={`/solutions/operations-support/${service.slug}`}>
                       Learn More
@@ -136,7 +136,7 @@ export default function OperationsSupport() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-[#1e3a8a] mb-4">
+              <h2 className="h2 text-[#1e3a8a] mb-4">
                 Why Outsource Technical Operations?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -150,7 +150,7 @@ export default function OperationsSupport() {
                   key={index}
                   className="text-center"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-[#f97316] rounded-2xl mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-[#FF5757] rounded-2xl mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-[#1e3a8a] mb-3">{benefit.title}</h3>
@@ -187,7 +187,7 @@ export default function OperationsSupport() {
       <section className="py-20 bg-[#1e3a8a] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-white mb-6">
+            <h2 className="h2 text-white mb-6">
               Let Experts Manage Your Facility
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -196,7 +196,7 @@ export default function OperationsSupport() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-[#f97316] hover:bg-[#ea580c] text-white gap-2"
+                className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
                 asChild
               >
                 <Link to="/enquiry">

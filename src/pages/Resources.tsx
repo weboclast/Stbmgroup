@@ -133,8 +133,8 @@ export function Resources() {
                 <Card key={itemIndex} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-[#f97316]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-6 h-6 text-[#f97316]" />
+                      <div className="w-12 h-12 bg-[#FF5757]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-6 h-6 text-[#FF5757]" />
                       </div>
                       <div className="flex-1">
                         <h3 className="h4 text-[#1e3a8a] mb-2">{item.title}</h3>
@@ -168,7 +168,7 @@ export function Resources() {
                 Our technical team can provide customized specifications, drawings, 
                 and documentation tailored to your specific project requirements.
               </p>
-              <Button size="lg" className="bg-[#f97316] hover:bg-[#ea580c]">
+              <Button size="lg" className="bg-[#FF5757] hover:bg-[#E04848]">
                 Request Custom Documentation
               </Button>
             </CardContent>

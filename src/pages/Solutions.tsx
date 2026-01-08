@@ -33,7 +33,7 @@ export default function Solutions() {
         "Hygienic infrastructure",
         "Power & automation systems"
       ],
-      color: "bg-[#f97316]",
+      color: "bg-[#FF5757]",
       image: "industrial hvac system"
     },
     {
@@ -66,7 +66,7 @@ export default function Solutions() {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5 mb-8">
-              <div className="w-2 h-2 bg-[#f97316] rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-[#FF5757] rounded-full animate-pulse"></div>
               <span className="text-sm">Three Solution Tiers • One Trusted Partner</span>
             </div>
 
@@ -122,7 +122,7 @@ export default function Solutions() {
                     <ul className="space-y-3 mb-8">
                       {tier.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 bg-[#f97316] rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 bg-[#FF5757] rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -161,7 +161,7 @@ export default function Solutions() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-[#f97316] hover:bg-[#ea580c] text-white gap-2"
+                className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
                 asChild
               >
                 <Link to="/enquiry">

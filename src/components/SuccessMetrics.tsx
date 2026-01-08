@@ -28,7 +28,7 @@ export function SuccessMetrics() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {metrics.map((metric, index) => (
             <div key={index} className="text-center">
-              <div className="text-[#f97316] mb-2">{metric.value}</div>
+              <div className="text-[#FF5757] mb-2">{metric.value}</div>
               <div className="text-sm text-blue-100">{metric.label}</div>
             </div>
           ))}

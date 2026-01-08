@@ -15,7 +15,7 @@ export function ProductDetail() {
   if (!product) {
     return (
       <div className="container mx-auto px-4 py-20 text-center">
-        <h2 className="text-[#1e3a8a] mb-4">Product Not Found</h2>
+      <h2 className="h2 text-[#1e3a8a] mb-4">Product Not Found</h2>
         <Button asChild>
           <Link to="/products">Back to Products</Link>
         </Button>
@@ -82,7 +82,7 @@ export function ProductDetail() {
           {/* Product Info */}
           <div>
             <div className="text-sm text-[#FF5757] mb-2">{product.category}</div>
-            <h1 className="text-[#1e3a8a] mb-2">{product.name}</h1>
+            <h1 className="h1 text-[#1e3a8a] mb-2">{product.name}</h1>
             <div className="text-xl text-gray-700 mb-6">Model: {product.model}</div>
             
             <p className="text-gray-600 mb-8 text-lg">{product.description}</p>
@@ -146,7 +146,7 @@ export function ProductDetail() {
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <div>
-            <h2 className="text-[#1e3a8a] mb-8">Related Equipment</h2>
+            <h2 className="h2 text-[#1e3a8a] mb-8">Related Equipment</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedProducts.map((relatedProduct) => (
                 <Card key={relatedProduct.id} className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -162,7 +162,7 @@ export function ProductDetail() {
                   <CardContent className="p-6">
                     <div className="text-sm text-[#FF5757] mb-2">{relatedProduct.category}</div>
                     <Link to={`/products/${relatedProduct.id}`}>
-                      <h3 className="text-[#1e3a8a] mb-2 hover:text-[#FF5757] transition-colors">
+                            <h3 className="h3 text-[#1e3a8a] mb-2 hover:text-[#FF5757] transition-colors">
                         {relatedProduct.name}
                       </h3>
                     </Link>

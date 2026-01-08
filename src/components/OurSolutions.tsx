@@ -35,7 +35,7 @@ export function OurSolutions() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold tracking-tight text-[#1e3a8a] mb-4">Tailored Solutions for Every Challenge</h2>
+          <h2 className="h2 text-[#1e3a8a] mb-4">Tailored Solutions for Every Challenge</h2>
           <p className="text-gray-600 text-lg">
             Whether you're building from the ground up, upgrading critical systems, or optimizing daily operations—STBM brings the expertise, integration, and accountability you need.
           </p>
