@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { completeFacilities } from "../data/solutions";
+import { FinalCTA } from "../components/FinalCTA";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -169,42 +170,7 @@ export default function CompleteFacilities() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="h2 text-[#1e3a8a] mb-6">
-              Ready to Build Your Facility?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Let's discuss your project requirements and show you how STBM delivers complete facilities that work from day one.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
-                asChild
-              >
-                <Link to="/enquiry">
-                  Schedule Consultation
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white gap-2"
-                asChild
-              >
-                <Link to="/projects">
-                  View Our Projects
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCTA />
     </div>
   );
 }

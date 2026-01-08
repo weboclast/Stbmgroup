@@ -1,223 +1,62 @@
 import { Button } from "./ui/button";
-import { Phone, Mail, MapPin, MessageSquare, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
-import { useState } from "react";
 
 export function FinalCTA() {
-  const [formData, setFormData] = useState({
-    solution: "",
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-  };
-
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section className="bg-black py-16 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Three Ways to Connect */}
-          <div className="text-center mb-16">
-            <h2 className="text-[#1e3a8a] mb-4">
-              Let's Solve Your Food Processing Challenges Together
+        <div className="max-w-4xl mx-auto">
+          {/* Main CTA Content */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to build your facility?
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-              Whether you're planning a new facility, upgrading equipment, or optimizing operations, our experts are ready to design the perfect solution for your needs.
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join the many successful food processing businesses that trust STBM for their equipment and facility needs. Let's discuss how we can help your operation thrive.
             </p>
-
-            <div className="grid md:grid-cols-3 gap-6 mb-16">
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-12 h-12 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-6 h-6 text-[#FF5757]" />
-                </div>
-                <h3 className="h5 text-[#1e3a8a] mb-2">Schedule a Consultation</h3>
-                <p className="text-sm text-gray-600 mb-4">Free facility assessment</p>
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="border-[#FF5757] text-[#FF5757] hover:bg-[#FF5757] hover:text-white"
-                  asChild
-                >
-                  <Link to="/enquiry">Book Now</Link>
-                </Button>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-12 h-12 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Download className="w-6 h-6 text-[#FF5757]" />
-                </div>
-                <h3 className="h5 text-[#1e3a8a] mb-2">Download Solutions Guide</h3>
-                <p className="text-sm text-gray-600 mb-4">2024 Food Processing Handbook</p>
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="border-[#FF5757] text-[#FF5757] hover:bg-[#FF5757] hover:text-white"
-                  asChild
-                >
-                  <Link to="/resources">Download</Link>
-                </Button>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-12 h-12 bg-[#FF5757]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MessageSquare className="w-6 h-6 text-[#FF5757]" />
-                </div>
-                <h3 className="h5 text-[#1e3a8a] mb-2">WhatsApp an Expert</h3>
-                <p className="text-sm text-gray-600 mb-4">Quick questions answered instantly</p>
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="border-[#FF5757] text-[#FF5757] hover:bg-[#FF5757] hover:text-white"
-                  asChild
-                >
-                  <a href="https://wa.me/971XXXXXXXXX" target="_blank" rel="noopener noreferrer">
-                    Chat Now
-                  </a>
-                </Button>
-              </div>
-            </div>
+            <Button
+              size="lg"
+              className="bg-white text-black hover:bg-gray-100 font-semibold"
+              asChild
+            >
+              <Link to="/enquiry">
+                Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
           </div>
 
-          {/* Bottom Contact Form */}
-          <div className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] rounded-2xl overflow-hidden">
-            <div className="grid md:grid-cols-2">
-              {/* Left Side - Form */}
-              <div className="p-8 md:p-10 bg-white">
-                <h3 className="h5 text-[#1e3a8a] mb-2">Ready to Transform Your Operations?</h3>
-                <p className="text-gray-600 mb-6">
-                  Join 100+ businesses that have revolutionized their food production with STBM solutions.
-                </p>
-
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="text-sm text-gray-600 mb-1.5 block">What solution are you looking for?</label>
-                    <Select value={formData.solution} onValueChange={(value) => setFormData({...formData, solution: value})}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a solution" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="turnkey">Turnkey Facility Development</SelectItem>
-                        <SelectItem value="modernization">Equipment Modernization</SelectItem>
-                        <SelectItem value="optimization">Process Optimization</SelectItem>
-                        <SelectItem value="compliance">Compliance & Certification</SelectItem>
-                        <SelectItem value="maintenance">Maintenance & Support</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm text-gray-600 mb-1.5 block">Your Name</label>
-                      <Input 
-                        value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        placeholder="John Smith"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="text-sm text-gray-600 mb-1.5 block">Company Name</label>
-                      <Input 
-                        value={formData.company}
-                        onChange={(e) => setFormData({...formData, company: e.target.value})}
-                        placeholder="Your Company"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm text-gray-600 mb-1.5 block">Email</label>
-                      <Input 
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        placeholder="john@company.com"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="text-sm text-gray-600 mb-1.5 block">Phone</label>
-                      <Input 
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        placeholder="+971 XX XXX XXXX"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="text-sm text-gray-600 mb-1.5 block">How can we help? (optional)</label>
-                    <Textarea 
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      placeholder="Tell us about your project..."
-                      rows={3}
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full bg-[#FF5757] hover:bg-[#E04848] text-white">
-                    Submit Enquiry
-                  </Button>
-                </form>
-              </div>
-
-              {/* Right Side - Contact Info */}
-              <div className="p-8 md:p-10 text-white">
-                <h3 className="h2 text-white mb-6">Get in Touch</h3>
-                
-                <div className="space-y-6 mb-8">
-                  <div className="flex gap-4">
-                    <Phone className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="text-sm text-blue-200 mb-1">Direct Line</div>
-                      <div className="text-white">+971 XX XXX XXXX</div>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <MessageSquare className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="text-sm text-blue-200 mb-1">WhatsApp</div>
-                      <div className="text-white">+971 XX XXX XXXX</div>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <Mail className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="text-sm text-blue-200 mb-1">Email</div>
-                      <div className="text-white">solutions@stbmgroup.com</div>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <MapPin className="w-5 h-5 text-[#FF5757] flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="text-sm text-blue-200 mb-1">Location</div>
-                      <div className="text-white">Abu Dhabi, UAE</div>
-                    </div>
-                  </div>
+          {/* Action Cards */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Documentation Card */}
+            <button className="group bg-gray-900 hover:bg-gray-800 p-8 rounded-lg text-left transition-colors duration-300">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Request Custom Documentation
+                  </h3>
+                  <p className="text-gray-400">
+                    Get detailed specs and technical documentation tailored to your needs
+                  </p>
                 </div>
-
-                <div className="border-t border-white/20 pt-6">
-                  <div className="text-sm text-blue-200 mb-2">Office Hours</div>
-                  <div className="text-white">Sunday - Thursday</div>
-                  <div className="text-white">8:00 AM - 6:00 PM GST</div>
-                </div>
+                <ArrowRight className="w-6 h-6 text-white flex-shrink-0 ml-4 group-hover:translate-x-1 transition-transform" />
               </div>
-            </div>
+            </button>
+
+            {/* Facility Tour Card */}
+            <button className="group bg-[#FF5757] hover:bg-[#E04848] p-8 rounded-lg text-left transition-colors duration-300">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Facility Tour
+                  </h3>
+                  <p className="text-red-100">
+                    Experience our state-of-the-art facilities and equipment firsthand
+                  </p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-white flex-shrink-0 ml-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </button>
           </div>
         </div>
       </div>

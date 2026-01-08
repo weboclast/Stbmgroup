@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle2, Plus } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { getSolutionDetail, getAllSolutions } from "../data/solutions";
 import { useEnquiryBasket } from "../contexts/EnquiryBasketContext";
+import { FinalCTA } from "../components/FinalCTA";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -243,42 +244,7 @@ export default function SolutionDetail() {
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="h2 text-[#1e3a8a] mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Contact our technical team to discuss your specific requirements and get a detailed proposal.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
-                asChild
-              >
-                <Link to="/enquiry">
-                  Submit Enquiry
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white gap-2"
-                asChild
-              >
-                <Link to="/about">
-                  Contact Us
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCTA />
     </div>
   );
 }

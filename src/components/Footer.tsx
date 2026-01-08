@@ -3,69 +3,102 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="bg-[#1e3a8a] text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
-          <div>
-            <Link to="/" className="inline-block mb-4">
-              <div className="tracking-wider mb-1">STBM</div>
-              <div className="text-sm text-blue-200">Food Technology</div>
-            </Link>
-            <p className="text-sm text-blue-200 mb-4">
-              Leading food processing solutions provider in UAE with 27+ years of industry expertise.
-            </p>
-          </div>
+    <footer className="bg-black text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Top Section - Logo and Desc */}
+        <div className="mb-12 pb-12 border-b border-gray-800">
+          <Link to="/" className="inline-flex items-center gap-2 mb-4">
+            <div className="w-10 h-10 bg-[#FF5757] rounded flex items-center justify-center font-bold text-lg">
+              S
+            </div>
+            <div>
+              <div className="font-bold text-lg">tbm</div>
+              <div className="text-xs text-gray-500">FOOD TECHNOLOGY</div>
+            </div>
+          </Link>
+          <p className="text-sm text-gray-400 max-w-xs mt-4">
+            Leading food processing solutions provider in UAE with 27+ years of industry expertise.
+          </p>
+        </div>
 
-          {/* Solutions */}
+        {/* Main Grid */}
+        <div className="grid md:grid-cols-5 gap-12 mb-12">
+          {/* Quick Links */}
           <div>
-            <div className="text-white mb-4">Quick Links</div>
-            <ul className="space-y-2 text-sm text-blue-200">
-              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/products" className="hover:text-white transition-colors">Equipment</Link></li>
-              <li><Link to="/projects" className="hover:text-white transition-colors">Projects</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><Link to="/" className="text-gray-400 text-sm hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/solutions/complete-facilities" className="text-gray-400 text-sm hover:text-white transition-colors">Complete Facilities</Link></li>
+              <li><Link to="/solutions/infrastructure-systems" className="text-gray-400 text-sm hover:text-white transition-colors">Infrastructure Systems</Link></li>
+              <li><Link to="/solutions/operations-support" className="text-gray-400 text-sm hover:text-white transition-colors">Operations & Support</Link></li>
+              <li><Link to="/products" className="text-gray-400 text-sm hover:text-white transition-colors">Equipments</Link></li>
+              <li><Link to="/projects" className="text-gray-400 text-sm hover:text-white transition-colors">Our Projects</Link></li>
             </ul>
           </div>
 
           {/* Resources */}
           <div>
-            <div className="text-white mb-4">Resources</div>
-            <ul className="space-y-2 text-sm text-blue-200">
-              <li><Link to="/resources" className="hover:text-white transition-colors">Download Catalogs</Link></li>
-              <li><Link to="/resources" className="hover:text-white transition-colors">Technical Docs</Link></li>
-              <li><Link to="/resources" className="hover:text-white transition-colors">Case Studies</Link></li>
-              <li><Link to="/enquiry" className="hover:text-white transition-colors">Request Quote</Link></li>
+            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Resources</h4>
+            <ul className="space-y-2">
+              <li><Link to="/resources" className="text-gray-400 text-sm hover:text-white transition-colors">Download Catalogs</Link></li>
+              <li><Link to="/resources" className="text-gray-400 text-sm hover:text-white transition-colors">Technical Docs</Link></li>
+              <li><Link to="/resources" className="text-gray-400 text-sm hover:text-white transition-colors">Case Studies</Link></li>
+              <li><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Video Resources</a></li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* About */}
           <div>
-            <div className="text-white mb-4">Contact Us</div>
-            <ul className="space-y-3 text-sm text-blue-200">
-              <li className="flex gap-2">
-                <Phone className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>+971 XX XXX XXXX</span>
+            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">About</h4>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-400 text-sm hover:text-white transition-colors">About Us</Link></li>
+              <li><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Career</a></li>
+              <li><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Leadership</a></li>
+              <li><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Video Resources</a></li>
+            </ul>
+          </div>
+
+          {/* Office Hours */}
+          <div>
+            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Office Hours</h4>
+            <div className="space-y-3">
+              <div>
+                <p className="text-gray-400 text-sm">Sunday - Thursday</p>
+                <p className="text-gray-400 text-sm">8:00 AM - 6:00 PM GST</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Support</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <Phone className="w-4 h-4 flex-shrink-0 text-[#FF5757] mt-0.5" />
+                <span className="text-gray-400 text-sm">+971 XX XXX XXXX</span>
               </li>
-              <li className="flex gap-2">
-                <Mail className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>info@stbm.ae</span>
+              <li className="flex items-start gap-2">
+                <Mail className="w-4 h-4 flex-shrink-0 text-[#FF5757] mt-0.5" />
+                <span className="text-gray-400 text-sm">info@stbm.ae</span>
               </li>
-              <li className="flex gap-2">
-                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>Abu Dhabi, UAE</span>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 flex-shrink-0 text-[#FF5757] mt-0.5" />
+                <span className="text-gray-400 text-sm">Al Mawrouth St - Al Danah - Zone 1, Abu Dhabi, UAE</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-blue-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-blue-200">
-          <div>
-            © 2025 STBM Food Technology. All rights reserved.
-          </div>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+        {/* Bottom Section */}
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-sm">
+            © 2026 STBM. All rights reserved.
+          </p>
+          <div className="flex gap-6 text-sm">
+            <a href="#" className="text-gray-500 hover:text-white transition-colors">Cookie Settings</a>
+            <a href="#" className="text-gray-500 hover:text-white transition-colors">Privacy</a>
+            <a href="#" className="text-gray-500 hover:text-white transition-colors">Terms</a>
+            <a href="#" className="text-gray-500 hover:text-white transition-colors">Accessibility</a>
           </div>
         </div>
       </div>

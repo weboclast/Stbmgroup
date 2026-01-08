@@ -4,6 +4,7 @@ import { ArrowRight, TrendingDown, Clock, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { operationsSupport } from "../data/solutions";
+import { FinalCTA } from "../components/FinalCTA";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -183,42 +184,7 @@ export default function OperationsSupport() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-[#1e3a8a] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="h2 text-white mb-6">
-              Let Experts Manage Your Facility
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Stop worrying about technical systems and focus on what you do best—producing quality food products.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-[#FF5757] hover:bg-[#E04848] text-white gap-2"
-                asChild
-              >
-                <Link to="/enquiry">
-                  Request Operations Assessment
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#1e3a8a] gap-2"
-                asChild
-              >
-                <Link to="/about">
-                  Meet Our Team
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCTA />
     </div>
   );
 }
