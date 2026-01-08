@@ -62,7 +62,7 @@ export function Footer() {
         </div>
 
         {/* Main Grid - 5 Columns */}
-        <div className="grid md:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Quick Links */}
           <div>
             <h4 className="text-gray-900 font-semibold mb-4 text-xs uppercase tracking-wider">Quick Links</h4>

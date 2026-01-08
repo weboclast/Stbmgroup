@@ -27,42 +27,6 @@ export function FinalCTA() {
             </Button>
           </div>
 
-          {/* Action Cards */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Documentation Card */}
-            <Link to="/resources" className="block">
-              <div className="group bg-gray-900 hover:bg-gray-800 p-8 rounded-lg text-left transition-all duration-300 cursor-pointer h-full">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Request Custom Documentation
-                    </h3>
-                    <p className="text-gray-400 text-sm">
-                      Get detailed specs and technical documentation tailored to your needs
-                    </p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-white flex-shrink-0 mt-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </Link>
-
-            {/* Facility Tour Card */}
-            <Link to="/enquiry" className="block">
-              <div className="group bg-[#FF5757] hover:bg-[#E04848] p-8 rounded-lg text-left transition-all duration-300 cursor-pointer h-full">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Facility Tour
-                    </h3>
-                    <p className="text-red-100 text-sm">
-                      Experience our state-of-the-art facilities and equipment firsthand
-                    </p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-white flex-shrink-0 mt-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </Link>
-          </div>
         </div>
       </div>
     </section>
