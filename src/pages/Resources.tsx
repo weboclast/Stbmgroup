@@ -1,6 +1,7 @@
 import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Download, FileText, BookOpen, Video } from "lucide-react";
+import { FinalCTA } from "../components/FinalCTA";
 
 const resources = [
   {
@@ -158,23 +159,8 @@ export function Resources() {
         ))}
       </div>
 
-      {/* CTA */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <Card className="bg-gradient-to-r from-neutral-10 to-neutral-9 text-white">
-            <CardContent className="p-12 text-center">
-              <h2 className="h2 text-white mb-4">Need Custom Documentation?</h2>
-              <p className="text-neutral-1 mb-8 max-w-2xl mx-auto">
-                Our technical team can provide customized specifications, drawings, 
-                and documentation tailored to your specific project requirements.
-              </p>
-              <Button size="lg" className="bg-primary-5 hover:bg-primary-6">
-                Request Custom Documentation
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+      {/* Final CTA */}
+      <FinalCTA />
     </div>
   );
 }

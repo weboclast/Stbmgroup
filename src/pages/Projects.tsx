@@ -4,6 +4,7 @@ import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { MapPin, Calendar, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FinalCTA } from "../components/FinalCTA";
 
 const projects = [
   {
@@ -190,26 +191,8 @@ export function Projects() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="h2 text-neutral-10 mb-4">Ready to Start Your Project?</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss your food processing requirements and create a customized solution for your facility.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-primary-5 hover:bg-primary-6 gap-2" asChild>
-              <Link to="/enquiry">
-                <Building2 className="w-5 h-5" />
-                Start Your Project
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link to="/products">Browse Equipment</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Final CTA */}
+      <FinalCTA />
     </div>
   );
 }

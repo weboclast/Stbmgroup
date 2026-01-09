@@ -5,6 +5,7 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { ArrowLeft, ShoppingBag, CheckCircle2, Download, Share2 } from "lucide-react";
 import { useEnquiryBasket } from "../contexts/EnquiryBasketContext";
 import { Card, CardContent } from "../components/ui/card";
+import { FinalCTA } from "../components/FinalCTA";
 
 export function ProductDetail() {
   const { id } = useParams();
@@ -182,6 +183,8 @@ export function ProductDetail() {
           </div>
         )}
       </div>
+      {/* Final CTA */}
+      <FinalCTA />
     </div>
   );
 }

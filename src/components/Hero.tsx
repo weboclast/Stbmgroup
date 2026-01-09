@@ -21,8 +21,8 @@ export function Hero() {
   const [isAnimating, setIsAnimating] = useState(true);
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const [isStuck, setIsStuck] = useState(false);
-  const sentinelRef = useRef<HTMLDivElement | null>(null);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const MotionLink = motion(Link);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,21 +38,36 @@ export function Hero() {
   }, []);
 
   useEffect(() => {
-    const sentinel = sentinelRef.current;
-    if (!sentinel) return;
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      // when the sentinel is no longer intersecting the viewport,
-      // the user has scrolled past the element's original position
-      setIsStuck(!entry.isIntersecting);
-    }, { root: null, threshold: 0 });
+    let rafId = 0;
 
-    observer.observe(sentinel);
-    return () => observer.disconnect();
+    const check = () => {
+      const rect = wrapper.getBoundingClientRect();
+      const bottomOffset = 16; // matches `bottom-4` (16px)
+      const shouldStick = rect.bottom <= window.innerHeight - bottomOffset;
+      setIsStuck((prev) => (prev === shouldStick ? prev : shouldStick));
+    };
+
+    const handler = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(check);
+    };
+
+    window.addEventListener('scroll', handler, { passive: true });
+    window.addEventListener('resize', handler);
+    handler();
+
+    return () => {
+      window.removeEventListener('scroll', handler);
+      window.removeEventListener('resize', handler);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
-    <section className="relative bg-neutral-8 text-white overflow-hidden">
+    <section className="relative bg-neutral-10 text-neutral-0 overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -65,13 +80,13 @@ export function Hero() {
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5">
             <div className="w-2 h-2 bg-secondary-3 rounded-full animate-pulse"></div>
-            <span className="text-sm text-white">27+ Years of Excellence • 100+ Projects Delivered • UAE Leader</span>
+            <span className="text-sm text-neutral-0">27+ Years of Excellence • 100+ Projects Delivered • UAE Leader</span>
           </div>
         </div>
 
         {/* Main Heading and Content */}
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h1 className="h1 text-white mb-6">
+          <h1 className="h1 text-neutral-0 mb-6">
             Your Trusted Food Tech Solutions Partner
           </h1>
           
@@ -111,7 +126,7 @@ export function Hero() {
             {/* Image */}
             <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1574850183045-b3a7bcc4b93d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmb29kJTIwcHJvY2Vzc2luZyUyMGZhY2lsaXR5fGVufDF8fHx8MTc2MjYwMjgwNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/src/assets/hero_image.webp"
                 alt="Modern food processing facility"
                 className="w-full h-full object-cover"
               />
@@ -121,7 +136,6 @@ export function Hero() {
             </div>
 
             {/* Prompt Input */}
-            <div ref={sentinelRef} aria-hidden className="w-full h-0" />
             <div
               ref={wrapperRef}
               className={`${isStuck ? 'fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50' : 'absolute bottom-8 left-1/2 transform -translate-x-1/2'} w-[calc(100%-4rem)] max-w-3xl`}
@@ -156,8 +170,8 @@ export function Hero() {
                         <p className="text-sm text-neutral-6">
                           Find Your Perfect Solution in 60 Seconds
                         </p>
-                        <button className="bg-primary-4 hover:bg-primary-5 transition-colors flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0">
-                          <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24">
+                        <button className="bg-primary-4 hover:bg-primary-5 transition-colors flex cursor-pointer items-center justify-center w-16 h-12 rounded-full sm:hidden flex-shrink-0">
+                          <svg className="w-6 h-6 text-neutral-0" fill="none" viewBox="0 0 24 24">
                             <path d={svgPaths.p244cad00} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                           </svg>
                         </button>
@@ -187,16 +201,17 @@ export function Hero() {
                         const path = paths[index] || "/solutions";
 
                         return (
-                          <Link
+                          <MotionLink
                             key={index}
                             to={path}
                             onClick={() => setIsPopoverOpen(false)}
-                            className={`px-4 py-4 hover:bg-neutral-4 display-flex transition-colors`}
+                            whileHover={{ scale: 1.01, backgroundColor: '#F3F5F7' }}
+                            initial={{ backgroundColor: '#ffffff' }}
+                            transition={{ duration: 0.15 }}
+                            className="px-4 py-4 text-neutral-10 text-base rounded-md block"
                           >
-                            <p className="text-neutral-10 text-base">
-                              {text}
-                            </p>
-                          </Link>
+                            {text}
+                          </MotionLink>
                         );
                       })}
                     </div>

@@ -3,6 +3,7 @@ import { Button } from "../components/ui/button";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Award, Users, CheckCircle2, HeadphonesIcon, Target, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FinalCTA } from "../components/FinalCTA";
 
 export function About() {
   return (
@@ -172,24 +173,8 @@ export function About() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-neutral-10 mb-4">Partner With STBM</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join the many successful food processing businesses that trust STBM for their equipment 
-            and facility needs. Let's discuss how we can help your operation thrive.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-primary-5 hover:bg-primary-6" asChild>
-              <Link to="/enquiry">Get Started</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link to="/projects">View Our Projects</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Final CTA */}
+      <FinalCTA />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Search, Filter, ShoppingBag, CheckCircle2 } from "lucide-react";
 import { useEnquiryBasket } from "../contexts/EnquiryBasketContext";
 import { Link } from "react-router-dom";
+import { FinalCTA } from "../components/FinalCTA";
 
 export function Products() {
   const [selectedCategory, setSelectedCategory] = useState("All Equipment");
@@ -143,6 +144,10 @@ export function Products() {
           </div>
         )}
       </div>
+
+      {/* Final CTA */}
+      <FinalCTA />
     </div>
   );
+  
 }

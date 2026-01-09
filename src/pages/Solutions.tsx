@@ -3,6 +3,7 @@ import { Card, CardContent } from "../components/ui/card";
 import { ArrowRight, Building2, Wrench, HeadphonesIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { FinalCTA } from "../components/FinalCTA";
 
 export default function Solutions() {
   const tiers = [
@@ -148,42 +149,8 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* Not Sure CTA */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="h2 text-neutral-10 mb-6">
-              Not Sure Which Solution You Need?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Our technical team can assess your facility, understand your challenges, and recommend the right solution—whether it's a complete facility, a targeted infrastructure upgrade, or ongoing support.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-primary-5 hover:bg-primary-6 text-white gap-2"
-                asChild
-              >
-                <Link to="/enquiry">
-                  Talk to Our Team
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-primary-5 text-primary-5 hover:bg-primary-5 hover:text-white gap-2"
-                asChild
-              >
-                <Link to="/projects">
-                  View Case Studies
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Final CTA */}
+      <FinalCTA />
     </div>
   );
 }

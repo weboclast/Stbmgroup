@@ -7,6 +7,7 @@ import { Label } from "../components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { Checkbox } from "../components/ui/checkbox";
 import { Card, CardContent } from "../components/ui/card";
+import { FinalCTA } from "../components/FinalCTA";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { ArrowRight, ArrowLeft, X, CheckCircle2, Send } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
@@ -91,9 +92,9 @@ export function Enquiry() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-gradient-to-r from-neutral-10 to-neutral-9 text-white py-12">
+      <section className="bg-gradient-to-r from-neutral-10 to-neutral-9 text-neutral-0 py-12">
         <div className="container mx-auto px-4">
-          <h1 className="h1 text-white mb-4">Enquiry Form</h1>
+          <h1 className="h1 text-neutral-0 mb-4">Enquiry Form</h1>
           <p className="text-neutral-1">
             Complete the form below and our team will respond within 24 hours
           </p>
@@ -101,16 +102,16 @@ export function Enquiry() {
       </section>
 
       {/* Progress Steps */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-white border-b border-neutral-2">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-center gap-4">
             {[1, 2, 3].map((stepNum) => (
               <div key={stepNum} className="flex items-center">
-                <div className={`flex items-center gap-3 ${stepNum <= step ? 'text-neutral-10' : 'text-gray-400'}`}>
+                <div className={`flex items-center gap-3 ${stepNum <= step ? 'text-neutral-10' : 'text-neutral-4'}`}>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                    stepNum < step ? 'bg-green-600 text-white' :
-                    stepNum === step ? 'bg-neutral-10 text-white' :
-                    'bg-gray-200 text-gray-600'
+                    stepNum < step ? 'bg-secondary-4 text-neutral-0' :
+                    stepNum === step ? 'bg-neutral-10 text-neutral-0' :
+                    'bg-gray-200 text-neutral-400'
                   }`}>
                     {stepNum < step ? <CheckCircle2 className="w-5 h-5" /> : stepNum}
                   </div>
@@ -119,7 +120,7 @@ export function Enquiry() {
                   </span>
                 </div>
                 {stepNum < 3 && (
-                  <div className={`w-12 sm:w-24 h-1 mx-2 ${stepNum < step ? 'bg-green-600' : 'bg-gray-200'}`} />
+                  <div className={`w-12 sm:w-24 h-1 mx-2 ${stepNum < step ? 'bg-secondary-3' : 'bg-neutral-2'}`} />
                 )}
               </div>
             ))}
@@ -136,7 +137,8 @@ export function Enquiry() {
               
               {items.length === 0 ? (
                 <Card className="p-12 text-center">
-                  <p className="text-gray-600 mb-6">Your enquiry basket is empty</p>
+                  {/* Image placeholder */}
+                  <p className="text-neutral-4 mb-6">Your enquiry basket is empty</p>
                   <Button asChild>
                     <Link to="/products">Browse Equipment</Link>
                   </Button>
@@ -148,7 +150,7 @@ export function Enquiry() {
                       <Card key={item.id}>
                         <CardContent className="p-4">
                           <div className="flex gap-4">
-                            <div className="w-24 h-24 flex-shrink-0 rounded overflow-hidden bg-gray-100">
+                            <div className="w-24 h-24 flex-shrink-0 rounded overflow-hidden bg-neutral-1">
                               <ImageWithFallback
                                 src={item.image}
                                 alt={item.name}
@@ -157,15 +159,15 @@ export function Enquiry() {
                             </div>
                             <div className="flex-1">
                               <h3 className="h3 text-neutral-10 mb-1">{item.name}</h3>
-                              <div className="text-sm text-gray-500 mb-2">Model: {item.model}</div>
-                              <div className="text-sm text-primary-5">{item.category}</div>
+                              <div className="text-sm text-neutral-4 mb-2">Model: {item.model}</div>
+                              <div className="text-sm text-primary-4">{item.category}</div>
                             </div>
                             <Button
                               variant="ghost"
                               size="sm"
                               onClick={() => removeFromBasket(item.id)}
                             >
-                              <X className="w-4 h-4" />
+                              <X className="w-4 h-4 cursor-pointer" />
                             </Button>
                           </div>
                         </CardContent>
@@ -354,7 +356,7 @@ export function Enquiry() {
                   <div className="space-y-3">
                     {items.map((item) => (
                       <div key={item.id} className="flex items-center gap-3 pb-3 border-b last:border-0">
-                        <div className="w-16 h-16 rounded overflow-hidden bg-gray-100 flex-shrink-0">
+                        <div className="w-16 h-16 rounded overflow-hidden bg-neutral-1 flex-shrink-0">
                           <ImageWithFallback
                             src={item.image}
                             alt={item.name}
@@ -363,7 +365,7 @@ export function Enquiry() {
                         </div>
                         <div>
                         <div className="text-neutral-10">{item.name}</div>
-                          <div className="text-sm text-gray-500">Model: {item.model}</div>
+                          <div className="text-sm text-neutral-4">Model: {item.model}</div>
                         </div>
                       </div>
                     ))}
@@ -413,13 +415,13 @@ export function Enquiry() {
                 </CardContent>
               </Card>
 
-              <div className="flex items-start gap-3 mb-6 p-4 bg-blue-50 rounded-lg">
+              <div className="flex items-start gap-3 mb-6 p-4 bg-neutral-1 rounded-lg">
                 <Checkbox
                   id="privacy"
                   checked={formData.acceptPrivacy}
                   onCheckedChange={(checked) => updateFormData('acceptPrivacy', checked as boolean)}
                 />
-                <label htmlFor="privacy" className="text-sm text-gray-700 cursor-pointer">
+                <label htmlFor="privacy" className="text-sm text-neutral-10 cursor-pointer">
                   I agree to STBM's privacy policy and consent to being contacted regarding this enquiry. 
                   I understand that my information will be used solely for business purposes and will not be shared with third parties.
                 </label>
@@ -437,7 +439,7 @@ export function Enquiry() {
                 <Button
                   size="lg"
                   onClick={handleSubmit}
-                  className="bg-primary-5 hover:bg-primary-6 gap-2"
+                  className="bg-primary-4 hover:bg-primary-5 gap-2"
                   disabled={!formData.acceptPrivacy}
                 >
                   <Send className="w-5 h-5" />
@@ -448,6 +450,8 @@ export function Enquiry() {
           )}
         </div>
       </div>
+      {/* Final CTA */}
+      <FinalCTA />
     </div>
   );
 }
